@@ -1,6 +1,7 @@
 # Changelog
 
-## [Unreleased]
+## [0.3.0] - 2026-04-19
+
 ### Added
 - Página de cadastro de voluntário com React Island
 - Formulário de cadastro com validação
@@ -10,6 +11,13 @@
 - Design Touch-First (min-h-[48px] em elementos interativos)
 - Acessibilidade WCAG AAA (ARIA labels, descrições, estrutura semântica)
 - Otimização de performance (compressão HTML, preconnect, manual chunks)
+- Testes E2E com Playwright
+
+### Changed
+- N/A
+
+### Fixed
+- N/A
 
 ## [0.2.0] - 2026-04-19
 
