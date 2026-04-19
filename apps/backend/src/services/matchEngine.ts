@@ -3,7 +3,7 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 // Função para calcular distância entre dois pontos (Haversine)
-function calculateDistance(lat1: number, lon1: number, lat2: number, lon2: number): number {
+export function calculateDistance(lat1: number, lon1: number, lat2: number, lon2: number): number {
   const R = 6371; // Raio da Terra em km
   const dLat = (lat2 - lat1) * Math.PI / 180;
   const dLon = (lon2 - lon1) * Math.PI / 180;
@@ -32,7 +32,7 @@ export const findTransportadores = async (doadorLocation: string, radiusKm: numb
     },
   });
   
-  const comDistancia = transportadores.map((v) => {
+  const comDistancia = transportadores.map((v: any) => {
     const [volLat, volLng] = v.localizacao.split(',').map(Number);
     return {
       ...v,
@@ -41,8 +41,8 @@ export const findTransportadores = async (doadorLocation: string, radiusKm: numb
   });
   
   return comDistancia
-    .filter((v) => v.distance <= radiusKm)
-    .sort((a, b) => a.distance - b.distance);
+    .filter((v: any) => v.distance <= radiusKm)
+    .sort((a: any, b: any) => a.distance - b.distance);
 };
 
 // Encontrar voluntários por competência e localização
@@ -64,7 +64,7 @@ export const findVoluntariosPorCompetencia = async (
     },
   });
   
-  const comDistancia = voluntarios.map((v) => {
+  const comDistancia = voluntarios.map((v: any) => {
     const [volLat, volLng] = v.localizacao.split(',').map(Number);
     return {
       ...v,
@@ -73,6 +73,6 @@ export const findVoluntariosPorCompetencia = async (
   });
   
   return comDistancia
-    .filter((v) => v.distance <= radiusKm)
-    .sort((a, b) => a.distance - b.distance);
+    .filter((v: any) => v.distance <= radiusKm)
+    .sort((a: any, b: any) => a.distance - b.distance);
 };

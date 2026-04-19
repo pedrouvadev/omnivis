@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 interface RequisitosPack {
   lider: number;
   auxiliar: number;
-  transporte?: string;
+  transporte?: string | null;
 }
 
 const requisitosPorTipo: Record<string, RequisitosPack> = {
@@ -74,7 +74,7 @@ export const gerarPack = async (tipo: string) => {
   
   // Selecionar membros aleatoriamente
   const liderSelecionado = lideres[0];
-  const auxiliaresSelecionados = auxiliares.slice(0, config.auxiliar);
+  const auxiliaresSelecionados = auxiliares.slice(0, config.auxiliar).map((a: any) => a.id);
   
   // Criar pack
   const pack = await prisma.pack.create({
