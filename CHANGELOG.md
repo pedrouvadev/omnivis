@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.5] - 2026-04-19
+
+### Fixed
+- Modificado CadastroForm para não falhar se criação de disponibilidade não funcionar
+- Adicionado try/catch na criação de disponibilidade (não crítico para cadastro)
+
 ## [1.0.4] - 2026-04-19
 
 ### Fixed

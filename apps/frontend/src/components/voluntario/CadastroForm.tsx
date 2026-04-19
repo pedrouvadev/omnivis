@@ -33,17 +33,22 @@ const CadastroForm: React.FC = () => {
 
       if (!response.ok) throw new Error('Erro ao cadastrar voluntário');
 
-      // Criar disponibilidade
       const voluntario = await response.json();
-      await fetch('http://localhost:3000/api/v1/disponibilidades', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          tipo: formData.tipoDisponibilidade,
-          ativo: formData.ativo,
-          voluntarioId: voluntario.id,
-        }),
-      });
+
+      // Tentar criar disponibilidade (não crítico)
+      try {
+        await fetch('http://localhost:3000/api/v1/disponibilidades', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            tipo: formData.tipoDisponibilidade,
+            ativo: formData.ativo,
+            voluntarioId: voluntario.id,
+          }),
+        });
+      } catch (dispError) {
+        console.warn('Não foi possível criar disponibilidade:', dispError);
+      }
 
       setSuccess(true);
       setFormData({
