@@ -1,5 +1,16 @@
 # Changelog
 
+## [Unreleased]
+### Added
+- API Routes para Voluntários (CRUD completo)
+- API Routes para Disponibilidades
+- API Routes para Abrigos
+- Sistema de Autenticação JWT
+- Middleware de Validação Zod
+- Motor de Match (Triangulação Logística)
+- Gerador de Packs de Voluntários
+- Documentação da API (OpenAPI/Swagger)
+
 ## [0.1.0] - 2026-04-19
 
 ### Added
