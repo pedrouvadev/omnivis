@@ -8,90 +8,111 @@ OMNIVIS é um sistema disruptivo de gestão de capital humano e material para de
 
 **Ineficiência da Solidariedade Espontânea** e **Paralisia Logística do Doador Individual**. Em situações de desastre, voluntários e doadores querem ajudar, mas não há um sistema organizado que transforme a intenção de ajudar em recursos técnicos catalogados e prontos para mobilização imediata.
 
-## 3 - Solução Proposta
+### Cadastro de Voluntários
+- Formulário com validação e geolocalização
+- Seleção de disponibilidades (Saúde, Logística, Engenharia)
+- Design acessível e touch-friendly (WCAG AAA)
 
-Um ecossistema de cadastro de alta granularidade que transforma a intenção de ajudar em recursos técnicos catalogados através de:
-- **Inventário de Prontidão:** Mapeamento prévio de ativos e competências
-- **Triangulação Logística:** Conexão doador-ponto de coleta-transportador
-- **Packs de Voluntários:** Agrupamento automático de competências
-- **Torre de Controle:** Dashboard administrativo para gestores de crise
+### Torre de Controle
+- Dashboard administrativo com estatísticas em tempo real
+- Filtros por competência e geolocalização
+- Visualização detalhada de voluntários
 
-## 4 - Estrutura do Sistema
+### Gestão de Packs
+- Geração automática de equipes operacionais
+- Convocação para missões
+- Status de disponibilidade e histórico
+
+### Triangulação Logística
+- Registro de doações
+- Match inteligente doador-transportador
+- Rastreamento de status em tempo real
+
+## 🏗️ Estrutura
+
+```
+omnivis-code/
+├── apps/
+│   ├── backend/          # API Express + Prisma + PostgreSQL
+│   └── frontend/         # Astro + React + Tailwind
+├── packages/
+│   ├── types/            # Tipos TypeScript compartilhados
+│   └── ui/               # Componentes UI compartilhados
+└── .github/workflows/    # CI/CD pipelines
+```
+
+## 🚀 Tecnologias
 
 ### Frontend
-- **Framework:** Astro 6.x (Static Site Generation)
-- **Interatividade:** React 19 (Islands Architecture)
-- **Estilização:** Tailwind CSS 4+ + shadcn/ui
-- **Linguagem:** TypeScript (Strict Mode)
-- **Hosting:** GitHub Pages
+- Astro 4.x
+- React 18
+- Tailwind CSS 3.4
+- shadcn/ui
+- Playwright (E2E tests)
 
 ### Backend
-- **Runtime:** Node.js 22 LTS
-- **Framework:** Express.js + TypeScript
-- **ORM/Database:** Prisma ORM + PostgreSQL (Neon.tech)
-- **Validação:** Zod
-- **Autenticação:** JWT + bcrypt
-- **Hosting:** Railway/Render
-
-### Banco de Dados
-- **Database:** PostgreSQL (serverless)
-- **ORM:** Prisma (Type-safe)
-- **Hosting:** Neon.tech ou Railway
-
-## Tecnologias Utilizadas
-
-- Astro 6.x
-- React 19
-- Tailwind CSS 4+
-- shadcn/ui
 - Node.js 22 LTS
-- Express.js
-- TypeScript (Strict Mode)
-- Prisma ORM
+- Express 4.18
+- TypeScript 5
+- Prisma ORM 5.0
 - PostgreSQL
-- Zod
-- JWT
-- Turborepo
-- GitHub Actions
+- JWT + bcryptjs
+- Zod (validação)
+- Jest (integration tests)
 
-## Como Executar
+### DevOps
+- Turborepo (monorepo)
+- GitHub Actions (CI/CD)
+- Railway (Backend deploy)
+- GitHub Pages (Frontend deploy)
 
-### Pré-requisitos
-- Node.js 22 LTS
-- npm ou yarn
-- Conta GitHub (para deploy)
-
-### Instalação
+## 📦 Instalação
 
 ```bash
-# Clone o repositório
+# Clonar repositório
 git clone <repo-url>
 cd omnivis-code
 
-# Instale dependências
+# Instalar dependências
 npm install
 
-# Configure variáveis de ambiente
-cp .env.example .env
-# Edite .env com suas configurações
+# Configurar variáveis de ambiente
+cp apps/backend/.env.example apps/backend/.env
+# Editar apps/backend/.env com suas credenciais
 
-# Execute em desenvolvimento
+# Executar migrações do banco de dados
+cd apps/backend
+npx prisma migrate dev
+
+# Iniciar desenvolvimento
 npm run dev
 ```
 
-### Scripts
+## 📜 Scripts
 
-- `npm run dev` - Inicia servidor de desenvolvimento
-- `npm run build` - Build para produção
-- `npm run test` - Executa testes
-- `npm run lint` - Executa linter
+- `npm run dev` - Inicia todos os pacotes em modo desenvolvimento
+- `npm run build` - Build de todos os pacotes
+- `npm run test` - Executa todos os testes
+- `npm run lint` - Executa lint em todos os pacotes
 
-## Documentação da API
+## 🌐 Deploy
 
-A documentação da API está disponível via Swagger UI após iniciar o backend.
+- **Frontend:** GitHub Pages (automático via GitHub Actions)
+- **Backend:** Railway (automático via GitHub Actions)
+
+## 📊 Status
+
+✅ **v1.0.0** - Todas as 7 fases concluídas e sistema funcional
+
+## 📄 Licença
+
+MIT
+
+## 👥 Contribuição
+
+Este é um projeto desenvolvido como parte de um plano de desenvolvimento estruturado. Para contribuições, por favor consulte o plano de desenvolvimento em `Documentação/_PLANO_DEV/`.
 
 ---
 
-**Status do Projeto:** Em Desenvolvimento
-**Versão:** 0.0.1
-**Última Atualização:** 2026-04-19
+**Status do Projeto:** Concluído
+**Versão:** 1.0.0
