@@ -1,5 +1,32 @@
 # Changelog
 
+## [1.0.3] - 2026-04-19
+
+### Fixed
+- Criado componente CadastroForm.tsx faltante no frontend
+- Corrigidos títulos das páginas (undefined) adicionando "- OMNIVIS"
+- Adicionado estado localizacao ao CadastroForm.tsx
+- Adicionado conteúdo funcional à página de Abrigos
+
+### Added
+- Diretório components/voluntario com componente CadastroForm
+- Formulário de cadastro com integração de API
+- Tratamento de erros e sucesso no cadastro
+- Geolocalização básica no formulário
+
+## [1.0.2] - 2026-04-19
+
+### Fixed
+- Criados diretórios faltantes no frontend (voluntario, abrigos)
+- Criadas páginas faltantes (voluntario/index.astro, cadastro.astro, abrigos/index.astro)
+- Corrigido Dashboard.tsx - adicionado estado voluntarioSelecionado
+- Adicionada importação de VoluntarioModal no Dashboard
+- Adicionado handler para abrir modal de detalhes
+
+### Added
+- Página de área do voluntário com link para cadastro
+- Página de abrigos com layout básico
+
 ## [1.0.1] - 2026-04-19
 
 ### Fixed

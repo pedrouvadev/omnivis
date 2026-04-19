@@ -14,6 +14,7 @@ const Dashboard: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [filtroTipo, setFiltroTipo] = useState<string>('');
+  const [voluntarioSelecionado, setVoluntarioSelecionado] = useState<Voluntario | null>(null);
 
   useEffect(() => {
     fetchVoluntarios();
@@ -136,7 +137,10 @@ const Dashboard: React.FC = () => {
                   ))}
                 </div>
               </div>
-              <button className="px-4 py-2 bg-blue-600 text-white rounded-lg min-h-[48px]">
+              <button 
+                onClick={() => setVoluntarioSelecionado(voluntario)}
+                className="px-4 py-2 bg-blue-600 text-white rounded-lg min-h-[48px]"
+              >
                 Detalhes
               </button>
             </div>

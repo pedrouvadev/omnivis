@@ -1,0 +1,11 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CadastroForm from '../../components/voluntario/CadastroForm';
+
+<Layout title="Cadastro de Voluntário - OMNIVIS">
+  <main class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-6">Cadastro de Voluntário</h1>
+    <CadastroForm client:load />
+    <a href="/voluntario" class="text-blue-600 hover:text-blue-800 mt-4 inline-block">Voltar</a>
+  </main>
+</Layout>
