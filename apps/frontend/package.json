@@ -13,6 +13,7 @@
     "@astrojs/react": "^3.0.0",
     "@astrojs/tailwind": "^5.0.0",
     "@omnivis/types": "*",
+    "@omnivis/ui": "*",
     "astro": "^4.0.0",
     "clsx": "^2.0.0",
     "react": "^18.2.0",

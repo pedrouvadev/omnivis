@@ -1,0 +1,13 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CadastroForm from '../../components/voluntario/CadastroForm';
+
+<Layout title="Cadastro de Voluntário">
+  <main class="container mx-auto px-4 py-8 max-w-2xl">
+    <h1 class="text-3xl font-bold mb-6 text-center">Cadastro de Voluntário</h1>
+    <p class="text-gray-600 mb-8 text-center">
+      Cadastre-se para ajudar em situações de desastre natural.
+    </p>
+    <CadastroForm client:load />
+  </main>
+</Layout>
