@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.0.0] - 2026-04-19
+
+### Added
+- Versão estável v1.0.0 do OMNIVIS
+- Todas as 7 fases de desenvolvimento concluídas
+- Sistema completo de gestão de desastres naturais
+
+### Changed
+- Documentação finalizada
+- Relatório de conclusão gerado
+
+### Fixed
+- N/A
+
 ## [0.6.0] - 2026-04-19
 
 ### Added
