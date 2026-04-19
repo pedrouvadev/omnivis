@@ -43,6 +43,8 @@ router.post('/', async (req: Request, res: Response) => {
   try {
     const { nome, email, telefone, localizacao } = req.body;
     
+    console.log('Dados recebidos:', { nome, email, telefone, localizacao });
+    
     const voluntario = await prisma.voluntario.create({
       data: {
         nome,
@@ -52,8 +54,10 @@ router.post('/', async (req: Request, res: Response) => {
       }
     });
     
+    console.log('Voluntário criado:', voluntario);
     res.status(201).json(voluntario);
   } catch (error) {
+    console.error('Erro ao criar voluntário:', error);
     res.status(500).json({ error: 'Erro ao criar voluntário' });
   }
 });

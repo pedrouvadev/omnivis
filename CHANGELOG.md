@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.10] - 2026-04-19
+
+### Fixed
+- Adicionado console.log na rota POST voluntários para debug
+- Adicionado console.error para ver erro detalhado
+
 ## [1.0.9] - 2026-04-19
 
 ### Fixed
