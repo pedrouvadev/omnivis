@@ -61,7 +61,8 @@ const CadastroForm: React.FC = () => {
       });
     } catch (err) {
       console.error('Erro no cadastro:', err);
-      setError('Não foi possível cadastrar. Tente novamente.');
+      const errorMessage = err instanceof Error ? err.message : 'Erro desconhecido';
+      setError(`Não foi possível cadastrar: ${errorMessage}`);
     } finally {
       setLoading(false);
     }

@@ -1,9 +1,9 @@
 # Status do Projeto
 
-**Última atualização:** 2026-04-19 22:00:00
+**Última atualização:** 2026-04-19 23:00:00
 **Branch atual:** main
 **Sprint:** Testes e Validação
-**Estado:** CADASTRO CORRIGIDO - v1.0.5
+**Estado:** DEBUG CADASTRO - v1.0.6
 
 ## Ambiente
 - ✅ Git inicializado

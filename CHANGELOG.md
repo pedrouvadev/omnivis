@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.0.7] - 2026-04-19
+
+### Fixed
+- Melhorada mensagem de erro no CadastroForm para mostrar erro detalhado
+- Limpo cache do Astro (.astro e node_modules/.astro)
+- Adicionado tratamento de erro mais específico
+
+## [1.0.6] - 2026-04-19
+
+### Fixed
+- Adicionado logs detalhados no console para debug do cadastro
+- Removido validação required dos inputs para facilitar teste
+- Adicionado console.log para ver dados enviados e response
+
 ## [1.0.5] - 2026-04-19
 
 ### Fixed
