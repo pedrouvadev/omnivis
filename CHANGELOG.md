@@ -1,6 +1,14 @@
 # Changelog
 
-## [0.1.0] - 2026-04-19
+## [Unreleased]
+### Added
+- Dashboard da Torre de Controle
+- Lista de voluntários com filtros por competência
+- Estatísticas em tempo real
+- Skeleton screens para loading states
+- Filtros avançados por tipo de disponibilidade
+
+## [0.3.0] - 2026-04-19
 
 ### Added
 - Monorepo Turborepo configurado
