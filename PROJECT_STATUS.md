@@ -1,9 +1,9 @@
 # Status do Projeto
 
-**Última atualização:** 2026-04-19 15:30:00
+**Última atualização:** 2026-04-19 16:00:00
 **Branch atual:** fase-4-frontend-torre
-**Sprint:** Fase 4 - Frontend MVP - Torre de Controle
-**Estado:** Em implementação
+**Sprint:** Fase 4 e 5 - Torre de Controle e Triangulação
+**Estado:** Concluído
 
 ## Ambiente
 - ✅ Git inicializado
@@ -20,7 +20,7 @@
 | 53a040f | feat | conclusão da fase 2 - testes de integração e correções de tipos | DevExecutorGPT | 2026-04-19 |
 | 4cf6025 | feat | implementação do frontend mvp - inventário de prontidão com formulário de cadastro | DevExecutorGPT | 2026-04-19 |
 | 64a29f1 | feat | conclusão da fase 3 - testes e2e com playwright | DevExecutorGPT | 2026-04-19 |
+| 7c094b9 | feat | implementação parcial da torre de controle - dashboard e filtros | DevExecutorGPT | 2026-04-19 |
 
 ## Pendências
-- [ ] Completar Fase 4: Frontend MVP
-- [ ] Iniciar Fase 5: Triangulação Logísticaabase
+- [ ] Iniciar Fase 6: Gestão de Capacidade e Packs

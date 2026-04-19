@@ -1,11 +1,13 @@
 # Changelog
 
-## [0.5.0] - 2026-04-19
+## [0.6.0] - 2026-04-19
 
 ### Added
-- Backend - Rotas para Doações (CRUD)
-- Backend - Atribuição de transportadores
-- Sistema básico de triangulação logística
+- Backend - API completa de Packs
+- Backend - Sistema de convocação de equipes
+- Frontend - Interface de gestão de Packs
+- Frontend - Geração e convocação de packs
+- Integração frontend-backend para gestão de equipes
 
 ### Changed
 - N/A
@@ -13,7 +15,7 @@
 ### Fixed
 - N/A
 
-## [0.4.0] - 2026-04-19
+## [0.5.0] - 2026-04-19
 
 ### Added
 - Dashboard da Torre de Controle
