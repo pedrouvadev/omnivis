@@ -1,0 +1,56 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Voluntario {
+  id           String   @id @default(cuid())
+  nome         String
+  email        String   @unique
+  telefone     String
+  localizacao  String   // "lat,lng"
+  createdAt    DateTime @default(now())
+  disponibilidades Disponibilidade[]
+  doacoes      Doacao[]
+}
+
+model Disponibilidade {
+  id           String   @id @default(cuid())
+  tipo         String   // Saude, Logistica, Engenharia
+  ativo        String   // Barco, Caminhao, Drone, CNH-D
+  voluntarioId String
+  voluntario   Voluntario @relation(fields: [voluntarioId], references: [id])
+}
+
+model Abrigo {
+  id           String   @id @default(cuid())
+  nome         String
+  localizacao  String
+  capacidade   Int
+  ocupacao     Int
+  necessidades String[]
+}
+
+model Doacao {
+  id           String   @id @default(cuid())
+  doadorId     String
+  tipo         String
+  status       String   // Pendente, Coletada, Entregue
+  transporteId String?
+  createdAt    DateTime @default(now())
+}
+
+model Pack {
+  id           String   @id @default(cuid())
+  nome         String
+  tipo         String   // Reconstrucao, Limpeza, Logistica
+  membros      String[] // IDs de voluntarios
+  disponivel   Boolean  @default(true)
+}
