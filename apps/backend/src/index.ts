@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import voluntariosRoutes from './routes/voluntarios';
 import disponibilidadesRoutes from './routes/disponibilidades';
 import abrigosRoutes from './routes/abrigos';
@@ -8,6 +9,12 @@ import packsRoutes from './routes/packs';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// CORS middleware
+app.use(cors({
+  origin: ['http://localhost:4321', 'http://127.0.0.1:4321'],
+  credentials: true,
+}));
 
 app.use(express.json());
 

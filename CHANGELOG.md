@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.0.9] - 2026-04-19
+
+### Fixed
+- Instalado @types/cors para corrigir erro TypeScript
+- Backend agora tem CORS configurado para permitir requisições do frontend
+
+### Added
+- Dependência @types/cors no backend
+
+## [1.0.8] - 2026-04-19
+
+### Fixed
+- Adicionado middleware CORS ao backend para permitir requisições do frontend
+- Instalado pacote cors no backend
+- Configurado CORS para localhost:4321
+
+### Added
+- Dependência cors no backend
+
 ## [1.0.7] - 2026-04-19
 
 ### Fixed
