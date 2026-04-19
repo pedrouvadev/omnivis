@@ -60,6 +60,7 @@ const CadastroForm: React.FC = () => {
         ativo: '',
       });
     } catch (err) {
+      console.error('Erro no cadastro:', err);
       setError('Não foi possível cadastrar. Tente novamente.');
     } finally {
       setLoading(false);
@@ -114,7 +115,6 @@ const CadastroForm: React.FC = () => {
             value={formData.nome}
             onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
             className="w-full px-4 py-3 border rounded-lg min-h-[48px]"
-            required
           />
         </div>
 
@@ -128,7 +128,6 @@ const CadastroForm: React.FC = () => {
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             className="w-full px-4 py-3 border rounded-lg min-h-[48px]"
-            required
           />
         </div>
 
@@ -174,7 +173,6 @@ const CadastroForm: React.FC = () => {
             onChange={(e) => setFormData({ ...formData, ativo: e.target.value })}
             placeholder="Ex: Barco, Caminhão, Drone, CNH-D"
             className="w-full px-4 py-3 border rounded-lg min-h-[48px]"
-            required
           />
         </div>
 
