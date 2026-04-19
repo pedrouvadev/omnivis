@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.4] - 2026-04-19
+
+### Fixed
+- Corrigido erro de sintaxe em arquivos .astro (frontmatter não fechado)
+- Adicionado fechamento correto com --- em todos os arquivos de páginas
+
 ## [1.0.3] - 2026-04-19
 
 ### Fixed
