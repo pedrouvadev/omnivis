@@ -1,9 +1,9 @@
 # Status do Projeto
 
-**Última atualização:** 2026-04-19 13:00:00
-**Branch atual:** develop
-**Sprint:** Fase 1 - Fundação e Configuração Inicial
-**Estado:** Concluído
+**Última atualização:** 2026-04-19 15:30:00
+**Branch atual:** fase-4-frontend-torre
+**Sprint:** Fase 4 - Frontend MVP - Torre de Controle
+**Estado:** Em implementação
 
 ## Ambiente
 - ✅ Git inicializado
@@ -15,6 +15,12 @@
 | Hash | Tipo | Descrição | Autor | Data |
 |------|------|-----------|-------|------|
 | 449ef41 | chore | inicialização do repositório e estrutura base | DevExecutorGPT | 2026-04-19 |
+| eed0ec2 | feat | conclusão da implementação da fase 1 - fundação e configuração inicial | DevExecutorGPT | 2026-04-19 |
+| 238a906 | feat | implementação do backend core - api routes, autenticação, motor de match e gerador de packs | DevExecutorGPT | 2026-04-19 |
+| 53a040f | feat | conclusão da fase 2 - testes de integração e correções de tipos | DevExecutorGPT | 2026-04-19 |
+| 4cf6025 | feat | implementação do frontend mvp - inventário de prontidão com formulário de cadastro | DevExecutorGPT | 2026-04-19 |
+| 64a29f1 | feat | conclusão da fase 3 - testes e2e com playwright | DevExecutorGPT | 2026-04-19 |
 
 ## Pendências
-- [ ] Iniciar Fase 2: Backend Core e Database
+- [ ] Completar Fase 4: Frontend MVP
+- [ ] Iniciar Fase 5: Triangulação Logísticaabase

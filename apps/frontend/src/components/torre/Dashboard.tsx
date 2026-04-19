@@ -62,7 +62,7 @@ const Dashboard: React.FC = () => {
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setFiltroTipo('')}
-            className={`px-4 py-2 rounded-lg min-h-[48px] ${
+            className={`px-4 py-2 rounded-lg min-h-[48px] md:min-h-[48px] lg:min-h-[64px] ${
               filtroTipo === '' ? 'bg-blue-600 text-white' : 'bg-gray-100'
             }`}
           >
@@ -72,7 +72,7 @@ const Dashboard: React.FC = () => {
             <button
               key={tipo}
               onClick={() => setFiltroTipo(tipo)}
-              className={`px-4 py-2 rounded-lg min-h-[48px] ${
+              className={`px-4 py-2 rounded-lg min-h-[48px] md:min-h-[48px] lg:min-h-[64px] ${
                 filtroTipo === tipo ? 'bg-blue-600 text-white' : 'bg-gray-100'
               }`}
             >
@@ -143,6 +143,13 @@ const Dashboard: React.FC = () => {
           ))}
         </div>
       </div>
+
+      {voluntarioSelecionado && (
+        <VoluntarioModal
+          voluntario={voluntarioSelecionado}
+          onClose={() => setVoluntarioSelecionado(null)}
+        />
+      )}
     </div>
   );
 };
