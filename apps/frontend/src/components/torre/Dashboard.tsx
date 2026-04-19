@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from 'react';
 
+interface Disponibilidade {
+  id: string;
+  tipo: string;
+  ativo: string;
+  voluntarioId: string;
+}
+
 interface Voluntario {
   id: string;
   nome: string;
   email: string;
   telefone: string;
   localizacao: string;
-  disponibilidades: string[];
+  disponibilidades: Disponibilidade[];
 }
 
 const Dashboard: React.FC = () => {
@@ -27,7 +34,7 @@ const Dashboard: React.FC = () => {
       const data = await response.json();
       setVoluntarios(data);
     } catch (err) {
-      setError('Não foi possível carregar os voluntários');
+      setError('Não foi possível carsome (d) => d.tipo === voluntários');
     } finally {
       setLoading(false);
     }
@@ -129,10 +136,10 @@ const Dashboard: React.FC = () => {
                 <div className="flex gap-2 mt-2">
                   {voluntario.disponibilidades.map((d) => (
                     <span
-                      key={d}
+                      key={d.id}
                       className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded"
                     >
-                      {d}
+                      {d.tipo}
                     </span>
                   ))}
                 </div>
