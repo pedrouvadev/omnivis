@@ -68,25 +68,41 @@ omnivis-code/
 
 ## 📦 Instalação
 
+### 1. Clonar repositório
 ```bash
-# Clonar repositório
 git clone <repo-url>
 cd omnivis-code
+```
 
-# Instalar dependências
+### 2. Iniciar Banco de Dados (Docker Compose)
+```bash
+docker-compose up -d
+```
+
+*Alternativa: Use PostgreSQL no Docploy (veja SETUP_DATABASE.md)*
+
+### 3. Instalar dependências
+```bash
 npm install
+```
 
-# Configurar variáveis de ambiente
-cp apps/backend/.env.example apps/backend/.env
-# Editar apps/backend/.env com suas credenciais
-
-# Executar migrações do banco de dados
+### 4. Configurar variáveis de ambiente
+```bash
 cd apps/backend
-npx prisma migrate dev
+cp .env.example .env
+```
 
-# Iniciar desenvolvimento
+### 5. Executar migrações do banco de dados
+```bash
+npx prisma migrate dev
+```
+
+### 6. Iniciar desenvolvimento
+```bash
 npm run dev
 ```
+
+Para instruções detalhadas de setup do banco, consulte [SETUP_DATABASE.md](SETUP_DATABASE.md)
 
 ## 📜 Scripts
 
