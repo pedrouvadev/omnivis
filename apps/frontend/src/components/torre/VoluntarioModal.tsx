@@ -39,9 +39,9 @@ const VoluntarioModal: React.FC<VoluntarioModalProps> = ({ voluntario, onClose }
           <div>
             <p className="text-sm text-gray-500 mb-2">Disponibilidades</p>
             <div className="flex flex-wrap gap-2">
-              {voluntario.disponibilidades?.map((d: string) => (
-                <span key={d} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
-                  {d}
+              {voluntario.disponibilidades?.map((d: any) => (
+                <span key={d.id} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
+                  {d.tipo}
                 </span>
               ))}
             </div>

@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.11] - 2026-04-19
+
+### Fixed
+- Corrigida interface Voluntario no Dashboard.tsx (disponibilidades é objeto, não string)
+- Corrigido filtro de voluntários por tipo de disponibilidade
+- Corrigida contagem de voluntários por competência
+- Corrigida renderização de disponibilidades no card e modal
+- Corrigido VoluntarioModal para usar propriedade tipo do objeto
+
 ## [1.0.10] - 2026-04-19
 
 ### Fixed
