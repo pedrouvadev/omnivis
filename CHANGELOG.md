@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.0.1] - 2026-04-19
+
+### Fixed
+- Corrigida rota de disponibilidades no backend (de /api/v1 para /api/v1/disponibilidades)
+- Adicionados arquivos de rotas faltantes (voluntarios, disponibilidades, abrigos, auth)
+- Adicionado serviço packGenerator para gestão de packs
+- Corrigido schema Prisma (removida relação doador em Doacao)
+
+### Added
+- Docker Compose para PostgreSQL local
+- Documentação de setup do banco de dados (SETUP_DATABASE.md)
+- Relatório de testes inicial (RELATORIO_TESTES.md)
+- Configuração de banco PostgreSQL no Docploy
+
+### Changed
+- Atualizado .env.example com credenciais do banco Docploy
+- Migrações Prisma executadas com sucesso
+
 ## [1.0.0] - 2026-04-19
 
 ### Added

@@ -32,4 +32,8 @@
 - ✅ Fase 7: Integração, Testes e Deploy
 
 ## Pendências
-- Nenhuma - Projeto concluído com sucesso
+- [ ] Reiniciar backend para aplicar correção de rota disponibilidades
+- [ ] Re-testar rotas do backend após reinicialização
+- [ ] Investigar erro "Disponibilidade não enc" em rotas
+- [ ] Testar integração completa frontend-backend
+- [ ] Testar criação de dados via API

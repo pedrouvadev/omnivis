@@ -11,20 +11,19 @@ datasource db {
 }
 
 model Voluntario {
-  id           String   @id @default(cuid())
-  nome         String
-  email        String   @unique
-  telefone     String
-  localizacao  String   // "lat,lng"
-  createdAt    DateTime @default(now())
+  id               String            @id @default(cuid())
+  nome             String
+  email            String            @unique
+  telefone         String
+  localizacao      String // "lat,lng"
+  createdAt        DateTime          @default(now())
   disponibilidades Disponibilidade[]
-  doacoes      Doacao[]
 }
 
 model Disponibilidade {
-  id           String   @id @default(cuid())
-  tipo         String   // Saude, Logistica, Engenharia
-  ativo        String   // Barco, Caminhao, Drone, CNH-D
+  id           String     @id @default(cuid())
+  tipo         String // Saude, Logistica, Engenharia
+  ativo        String // Barco, Caminhao, Drone, CNH-D
   voluntarioId String
   voluntario   Voluntario @relation(fields: [voluntarioId], references: [id])
 }
@@ -42,15 +41,15 @@ model Doacao {
   id           String   @id @default(cuid())
   doadorId     String
   tipo         String
-  status       String   // Pendente, Coletada, Entregue
+  status       String // Pendente, Coletada, Entregue
   transporteId String?
   createdAt    DateTime @default(now())
 }
 
 model Pack {
-  id           String   @id @default(cuid())
-  nome         String
-  tipo         String   // Reconstrucao, Limpeza, Logistica
-  membros      String[] // IDs de voluntarios
-  disponivel   Boolean  @default(true)
+  id         String   @id @default(cuid())
+  nome       String
+  tipo       String // Reconstrucao, Limpeza, Logistica
+  membros    String[] // IDs de voluntarios
+  disponivel Boolean  @default(true)
 }

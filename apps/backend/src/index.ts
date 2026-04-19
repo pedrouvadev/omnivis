@@ -18,7 +18,7 @@ app.get('/health', (req, res) => {
 
 // API Routes
 app.use('/api/v1/voluntarios', voluntariosRoutes);
-app.use('/api/v1', disponibilidadesRoutes);
+app.use('/api/v1/disponibilidades', disponibilidadesRoutes);
 app.use('/api/v1/abrigos', abrigosRoutes);
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/doacoes', doacoesRoutes);
