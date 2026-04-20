@@ -6,6 +6,7 @@
 [![Node Version](https://img.shields.io/badge/node-%3E%3D22.0.0-brightgreen)](https://nodejs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org)
 [![Status](https://img.shields.io/badge/status-v1.0.13-success)](CHANGELOG.md)
+[![🌐 Acesse o Sistema](https://img.shields.io/badge/🔗_Site-OMNIVIS_Online-06B6D4?style=for-the-badge)](https://pedrouvadev.github.io/omnivis/)
 
 **Um sistema disruptivo de gestão de capital humano e material para desastres naturais**
 
@@ -47,6 +48,14 @@ Em situações de desastre, voluntários e doadores querem ajudar, mas não há 
 - Evite estoques inúteis e desperdício
 
 **OMNIVIS é um "ERP da Solidariedade" que resolve o gargalo da mobilização.**
+
+---
+
+## 🌐 Acesse o Sistema
+
+**🔗 URL Pública:** [https://pedrouvadev.github.io/omnivis/](https://pedrouvadev.github.io/omnivis/)
+
+> O sistema está hospedado no GitHub Pages e atualizado automaticamente a cada push na branch `main`.
 
 ---
 
