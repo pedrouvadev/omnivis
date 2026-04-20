@@ -7,10 +7,12 @@ import { Icons } from '../components/icons/OmnivisIcons';
 <Layout title="OMNIVIS - Orquestrador Logístico de Solidariedade">
   <!-- Hero Section -->
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-    <!-- Hero3D Background - client:visible para performance (LCP < 1s) -->
-    <div class="absolute inset-0 z-0 opacity-40">
+    <!-- Hero3D Background - desativado em mobile para performance -->
+    <div class="absolute inset-0 z-0 opacity-40 hidden md:block">
       <Hero3D client:visible />
     </div>
+    <!-- Gradient fallback para mobile -->
+    <div class="absolute inset-0 z-0 opacity-60 md:hidden bg-gradient-to-br from-blue-900/50 via-slate-900/50 to-cyan-900/50" />
 
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-30 z-0">
@@ -27,9 +29,11 @@ import { Icons } from '../components/icons/OmnivisIcons';
       </div>
 
       <!-- Headline - Tipografia Vanguarda 2026 -->
-      <h1 class="text-[4.5rem] font-extrabold text-white mb-6 tracking-tight leading-none">
-        OMNIVIS
-        <span class="block text-3xl md:text-5xl lg:text-6xl font-normal text-[#00F2FF] mt-4 tracking-normal">
+      <h1 class="text-center mx-auto">
+        <span class="block text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-extrabold text-white mb-4 md:mb-6 tracking-tight leading-none">
+          OMNIVIS
+        </span>
+        <span class="block text-xl sm:text-2xl md:text-5xl lg:text-6xl font-normal text-[#00F2FF] mt-2 md:mt-4 tracking-normal px-2">
           Orquestrador Logístico de Solidariedade
         </span>
       </h1>
@@ -41,40 +45,40 @@ import { Icons } from '../components/icons/OmnivisIcons';
       </p>
 
       <!-- CTA Buttons - Touch Targets 48x48dp WCAG AAA -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-lg mx-auto px-4">
         <button 
           onclick="window.location.href='/voluntario/cadastro'"
-          class="inline-flex items-center justify-center text-center min-h-[48px] px-8 py-3 bg-gradient-to-r from-[#F97316] to-[#EF4444] text-white rounded-lg font-semibold hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#F97316]/25 cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#F97316]"
+          class="w-full sm:w-auto inline-flex items-center justify-center text-center min-h-[48px] px-6 sm:px-8 py-3 bg-gradient-to-r from-[#F97316] to-[#EF4444] text-white rounded-lg font-semibold hover:opacity-90 transition-all duration-300 hover:shadow-xl hover:shadow-[#F97316]/25 cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#F97316] whitespace-nowrap"
         >
           Cadastrar Voluntário
         </button>
         <button 
           onclick="document.getElementById('como-funciona').scrollIntoView({behavior: 'smooth'})"
-          class="inline-flex items-center justify-center text-center min-h-[48px] px-8 py-3 bg-transparent border-2 border-[#06B6D4] text-[#06B6D4] rounded-lg font-semibold hover:bg-[#06B6D4]/10 transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#06B6D4]"
+          class="w-full sm:w-auto inline-flex items-center justify-center text-center min-h-[48px] px-6 sm:px-8 py-3 bg-transparent border-2 border-[#06B6D4] text-[#06B6D4] rounded-lg font-semibold hover:bg-[#06B6D4]/10 transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#06B6D4] whitespace-nowrap"
         >
           Como Funciona
         </button>
       </div>
 
       <!-- Stats -->
-      <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto mt-20 pt-12 border-t border-white/10">
-        <div>
-          <div class="text-3xl md:text-4xl font-bold text-white mb-1">10k+</div>
-          <div class="text-sm text-gray-400">Voluntários</div>
+      <div class="grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto mt-16 md:mt-20 pt-8 md:pt-12 border-t border-white/10">
+        <div class="text-center">
+          <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1">10k+</div>
+          <div class="text-xs sm:text-sm text-gray-400">Voluntários</div>
         </div>
-        <div>
-          <div class="text-3xl md:text-4xl font-bold text-white mb-1">50+</div>
-          <div class="text-sm text-gray-400">Abrigos</div>
+        <div class="text-center">
+          <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1">50+</div>
+          <div class="text-xs sm:text-sm text-gray-400">Abrigos</div>
         </div>
-        <div>
-          <div class="text-3xl md:text-4xl font-bold text-white mb-1">24/7</div>
-          <div class="text-sm text-gray-400">Monitoramento</div>
+        <div class="text-center">
+          <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1">24/7</div>
+          <div class="text-xs sm:text-sm text-gray-400">Monitoramento</div>
         </div>
       </div>
     </div>
 
-    <!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+    <!-- Scroll Indicator - Centralizado -->
+    <div class="absolute bottom-8 left-0 right-0 flex justify-center animate-bounce">
       <Icons.ChevronDown class="w-6 h-6 text-white/50" />
     </div>
   </section>
@@ -275,16 +279,16 @@ import { Icons } from '../components/icons/OmnivisIcons';
         Junte-se a milhares de voluntários e ajude a salvar vidas em situações de desastre. 
         Sua solidariedade organizada pode mudar tudo.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-md mx-auto px-4">
         <button 
           onclick="window.location.href='/voluntario/cadastro'"
-          class="inline-flex items-center justify-center text-center min-h-[48px] px-8 py-3 bg-gradient-to-r from-[#F97316] to-[#EF4444] text-white rounded-lg font-semibold hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#F97316]/25 cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#F97316]"
+          class="w-full sm:w-auto inline-flex items-center justify-center text-center min-h-[48px] px-6 sm:px-8 py-3 bg-gradient-to-r from-[#F97316] to-[#EF4444] text-white rounded-lg font-semibold hover:opacity-90 transition-all duration-300 hover:shadow-xl hover:shadow-[#F97316]/25 cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#F97316] whitespace-nowrap"
         >
           Quero Ajudar Agora
         </button>
         <button 
           onclick="document.getElementById('como-funciona').scrollIntoView({behavior: 'smooth'})"
-          class="inline-flex items-center justify-center text-center min-h-[48px] px-8 py-3 bg-transparent border-2 border-[#06B6D4] text-[#06B6D4] rounded-lg font-semibold hover:bg-[#06B6D4]/10 transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#06B6D4]"
+          class="w-full sm:w-auto inline-flex items-center justify-center text-center min-h-[48px] px-6 sm:px-8 py-3 bg-transparent border-2 border-[#06B6D4] text-[#06B6D4] rounded-lg font-semibold hover:bg-[#06B6D4]/10 transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#06B6D4] whitespace-nowrap"
         >
           Ver Detalhes
         </button>
