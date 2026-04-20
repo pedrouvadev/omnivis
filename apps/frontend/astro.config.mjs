@@ -4,6 +4,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   output: 'static',
+  base: '/omnivis-code',
   viewTransitions: {
     // Configurações de View Transitions nativos do Astro
     prefetch: 'all',
