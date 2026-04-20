@@ -7,7 +7,7 @@ OMNIVIS é um sistema monorepo construído com Turborepo, utilizando uma arquite
 ## Estrutura do Monorepo
 
 ```
-omnivis-code/
+omnivis/
 ├── apps/
 │   ├── backend/          # API Express + Prisma + PostgreSQL
 │   └── frontend/         # Astro + React + Tailwind
@@ -222,7 +222,7 @@ model Pack {
 
 ### Frontend
 - **Plataforma:** GitHub Pages
-- **URL:** `https://usuario.github.io/omnivis-code`
+- **URL:** `https://usuario.github.io/omnivis`
 - **Build:** `npm run build`
 
 ### Backend

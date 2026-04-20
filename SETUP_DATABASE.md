@@ -5,7 +5,7 @@
 ### 1. Iniciar PostgreSQL com Docker Compose
 
 ```bash
-# Na raiz do projeto omnivis-code
+# Na raiz do projeto omnivis
 docker-compose up -d
 ```
 
@@ -35,7 +35,7 @@ O `.env.example` já está configurado com as credenciais do Docker Compose.
 ### 4. Instalar dependências (se ainda não instalou)
 
 ```bash
-cd omnivis-code
+cd omnivis
 npm install
 ```
 

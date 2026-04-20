@@ -41,7 +41,7 @@ Este documento contém as instruções para atualizar o stack tecnológico do fr
 ### 1. Navegar para o diretório do frontend
 
 ```bash
-cd omnivis-code/apps/frontend
+cd omnivis/apps/frontend
 ```
 
 ### 2. Instalar as dependências

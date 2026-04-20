@@ -193,8 +193,8 @@ omnivis-code/
 ### 1. Clonar o Repositório
 
 ```bash
-git clone https://github.com/pedrouvadev/omnivis-code.git
-cd omnivis-code
+git clone https://github.com/pedrouvadev/omnivis.git
+cd omnivis
 ```
 
 ### 2. Iniciar o Banco de Dados
@@ -263,7 +263,7 @@ O backend estará disponível em `http://localhost:3000`
 
 O deploy é automático via GitHub Actions quando há push para a branch `main`.
 
-**URL:** [https://pedrouvadev.github.io/omnivis-code](https://pedrouvadev.github.io/omnivis-code)
+**URL:** [https://pedrouvadev.github.io/omnivis](https://pedrouvadev.github.io/omnivis)
 
 ### Backend (Railway)
 
@@ -332,7 +332,7 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 📧 **Email:** pedrouvadev@gmail.com
 
-🔗 **Repositório:** https://github.com/pedrouvadev/omnivis-code.git
+🔗 **Repositório:** https://github.com/pedrouvadev/omnivis.git
 
 Desenvolvido como parte de um plano de desenvolvimento estruturado para o desafio técnico de back-end.
 
