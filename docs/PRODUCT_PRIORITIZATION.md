@@ -1,3 +1,32 @@
+<!--
+  =====================================================
+  Desenvolvido por: Pedro Uva (Mr. Uva)
+  Full-Stack Engineer & AI Strategist | Estrategista Digital
+  
+  Website: https://mruva.com.br/
+  LinkedIn: https://www.linkedin.com/in/mruva/
+  
+  Copyright © 2026 Pedro Uva. Todos os direitos reservados.
+  
+  Este repositório é público. Se você clonar, fizer fork ou utilizar
+  este código em seus projetos, por favor, mantenha este aviso de
+  créditos intacto no topo de cada arquivo.
+  
+  Agradeço pelo respeito ao meu trabalho e à minha contribuição
+  para a comunidade open-source.
+  
+  Excelência desde 1997 • +25 anos de experiência em Full-Stack,
+  Inteligência Artificial e estratégias digitais.
+  =====================================================
+-->
+
+---
+tags: [product-owner, priorizacao, mvp, lean, features, roadmap, user-stories]
+tipo: nota
+status: processado
+topico_principal: Priorização de Produto
+---
+
 # ProductOwnerGPT - Priorização de Features e MVP Lean
 
 **Data:** 2026-04-19  
@@ -12,18 +41,18 @@ Priorização de features do Design System OMNIVIS baseada em valor de negócio,
 
 ### Features do Design System
 
-| Feature | Valor de Negócio | Impacto | Esforço | ROI | Prioridade |
+| Feature | Valor | Impacto | Esforço | ROI | Prioridade |
 |---------|-----------------|---------|---------|-----|------------|
-| Design Tokens (Base) | Alta | Alto | Baixo | Alto | P0 |
+| [[DESIGN_TOKENS_IMPLEMENTATION|Design Tokens]] (Base) | Alta | Alto | Baixo | Alto | P0 |
 | Tipografia WCAG AAA | Alta | Alto | Baixo | Alto | P0 |
 | Sistema de Cores | Alta | Alto | Baixo | Alto | P0 |
 | Ícones OMNIVIS | Média | Médio | Médio | Médio | P1 |
 | Animações/Easing | Média | Médio | Baixo | Médio | P1 |
-| Hero3D | Alta | Alto | Alto | Médio | P1 |
-| BentoGrid | Média | Alto | Médio | Médio | P1 |
-| SmoothScroll | Baixa | Médio | Médio | Baixo | P2 |
-| Dark Mode | Média | Médio | Médio | Médio | P1 |
-| Glassmorphism | Baixa | Baixo | Baixo | Médio | P2 |
+| [[HERO_PAGE_IMPLEMENTATION|Hero3D]] | Alta | Alto | Alto | Médio | P1 |
+| [[HERO_PAGE_IMPLEMENTATION|BentoGrid]] | Média | Alto | Médio | Médio | P1 |
+| [[HERO_PAGE_IMPLEMENTATION|SmoothScroll]] | Baixa | Médio | Médio | Baixo | P2 |
+| [[ACCESSIBILITY_VALIDATION|Dark Mode]] | Média | Médio | Médio | Médio | P1 |
+| [[HERO_PAGE_IMPLEMENTATION|Glassmorphism]] | Baixa | Baixo | Baixo | Médio | P2 |
 | Neon Effects | Baixa | Baixo | Baixo | Baixo | P3 |
 
 ### Estratégia MVP Lean

@@ -1,3 +1,32 @@
+<!--
+  =====================================================
+  Desenvolvido por: Pedro Uva (Mr. Uva)
+  Full-Stack Engineer & AI Strategist | Estrategista Digital
+  
+  Website: https://mruva.com.br/
+  LinkedIn: https://www.linkedin.com/in/mruva/
+  
+  Copyright © 2026 Pedro Uva. Todos os direitos reservados.
+  
+  Este repositório é público. Se você clonar, fizer fork ou utilizar
+  este código em seus projetos, por favor, mantenha este aviso de
+  créditos intacto no topo de cada arquivo.
+  
+  Agradeço pelo respeito ao meu trabalho e à minha contribuição
+  para a comunidade open-source.
+  
+  Excelência desde 1997 • +25 anos de experiência em Full-Stack,
+  Inteligência Artificial e estratégias digitais.
+  =====================================================
+-->
+
+---
+tags: [hero-page, landing-page, hero3d, bento-grid, smooth-scroll, implementacao]
+tipo: nota
+status: processado
+topico_principal: Implementação da Hero Page
+---
+
 # Engine-LP-Qualidade-Maxima-IA - Implementação da Hero Page
 
 **Data:** 2026-04-19  
@@ -6,7 +35,7 @@
 
 ## Visão Geral
 
-Estratégia de implementação da Hero Page do OMNIVIS utilizando o Design System completo, componentes premium (Hero3D, BentoGrid, SmoothScroll) e otimizações de conversão.
+Estratégia de implementação da Hero Page do [[README|OMNIVIS]] utilizando o [[DESIGN_TOKENS_IMPLEMENTATION|Design System]] completo, componentes premium ([[HERO_PAGE_IMPLEMENTATION|Hero3D]], [[HERO_PAGE_IMPLEMENTATION|BentoGrid]], [[HERO_PAGE_IMPLEMENTATION|SmoothScroll]]) e otimizações de conversão.
 
 ## Estrutura da Hero Page
 
@@ -305,9 +334,9 @@ A Hero Page do OMNIVIS foi projetada com foco em conversão, utilizando o Design
 
 **Próximos Passos:**
 1. ObsidianArchitectGPT: Documentar no Obsidian
-2. ReadmeGenGPT: Atualizar README
-3. ProductOwnerGPT: Priorizar features
-4. AgileScrumGPT: Definir backlog
+2. [[README|ReadmeGenGPT]]: Atualizar README
+3. [[PRODUCT_PRIORITIZATION|ProductOwnerGPT]]: Priorizar features
+4. [[BACKLOG_USER_STORIES|AgileScrumGPT]]: Definir backlog
 
 ---
 

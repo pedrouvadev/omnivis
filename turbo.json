@@ -1,4 +1,5 @@
 {
+  "_comment": "===================================================== Desenvolvido por: Pedro Uva (Mr. Uva) - Full-Stack Engineer & AI Strategist | Website: https://mruva.com.br/ | Copyright 2026 Pedro Uva. Todos os direitos reservados. =====================================================",
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local"],
   "pipeline": {

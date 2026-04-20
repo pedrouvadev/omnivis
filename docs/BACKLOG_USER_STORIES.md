@@ -1,3 +1,32 @@
+<!--
+  =====================================================
+  Desenvolvido por: Pedro Uva (Mr. Uva)
+  Full-Stack Engineer & AI Strategist | Estrategista Digital
+  
+  Website: https://mruva.com.br/
+  LinkedIn: https://www.linkedin.com/in/mruva/
+  
+  Copyright © 2026 Pedro Uva. Todos os direitos reservados.
+  
+  Este repositório é público. Se você clonar, fizer fork ou utilizar
+  este código em seus projetos, por favor, mantenha este aviso de
+  créditos intacto no topo de cada arquivo.
+  
+  Agradeço pelo respeito ao meu trabalho e à minha contribuição
+  para a comunidade open-source.
+  
+  Excelência desde 1997 • +25 anos de experiência em Full-Stack,
+  Inteligência Artificial e estratégias digitais.
+  =====================================================
+-->
+
+---
+tags: [backlog, user-stories, agile, scrum, story-points, dependencias]
+tipo: nota
+status: processado
+topico_principal: Backlog e User Stories
+---
+
 # AgileScrumGPT - Backlog e User Stories
 
 **Data:** 2026-04-19  
@@ -25,7 +54,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 2  
 **Dependências:** Nenhuma  
-**Responsável:** DevOpsStackGPT
+**Responsável:** [[arquitetura|DevOpsStackGPT]]
 
 ---
 
@@ -42,7 +71,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 3  
 **Dependências:** US-001  
-**Responsável:** SaaSArchitectGPT
+**Responsável:** [[PERFORMANCE_OPTIMIZATION|SaaSArchitectGPT]]
 
 ---
 
@@ -59,7 +88,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 2  
 **Dependências:** US-002  
-**Responsável:** SaaSArchitectGPT
+**Responsável:** [[PERFORMANCE_OPTIMIZATION|SaaSArchitectGPT]]
 
 ---
 
@@ -79,7 +108,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 3  
 **Dependências:** US-003  
-**Responsável:** ResponsivoGPT
+**Responsável:** [[ACCESSIBILITY_VALIDATION|ResponsivoGPT]]
 
 ---
 
@@ -97,7 +126,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 5  
 **Dependências:** US-004  
-**Responsável:** ResponsivoGPT
+**Responsável:** [[ACCESSIBILITY_VALIDATION|ResponsivoGPT]]
 
 ---
 
@@ -114,7 +143,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 3  
 **Dependências:** US-003  
-**Responsável:** SaaSArchitectGPT
+**Responsável:** [[PERFORMANCE_OPTIMIZATION|SaaSArchitectGPT]]
 
 ---
 
@@ -135,7 +164,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 5  
 **Dependências:** US-005  
-**Responsável:** SaaSArchitectGPT
+**Responsável:** [[PERFORMANCE_OPTIMIZATION|SaaSArchitectGPT]]
 
 ---
 
@@ -154,7 +183,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 5  
 **Dependências:** US-005  
-**Responsável:** SaaSArchitectGPT
+**Responsável:** [[PERFORMANCE_OPTIMIZATION|SaaSArchitectGPT]]
 
 ---
 
@@ -172,7 +201,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 3  
 **Dependências:** US-005  
-**Responsável:** SaaSArchitectGPT
+**Responsável:** [[PERFORMANCE_OPTIMIZATION|SaaSArchitectGPT]]
 
 ---
 
@@ -191,7 +220,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 8  
 **Dependências:** US-007  
-**Responsável:** SaaSArchitectGPT
+**Responsável:** [[PERFORMANCE_OPTIMIZATION|SaaSArchitectGPT]]
 
 ---
 
@@ -209,7 +238,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 5  
 **Dependências:** US-007  
-**Responsável:** SaaSArchitectGPT
+**Responsável:** [[PERFORMANCE_OPTIMIZATION|SaaSArchitectGPT]]
 
 ---
 
@@ -226,7 +255,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 2  
 **Dependências:** US-005  
-**Responsável:** SaaSArchitectGPT
+**Responsável:** [[PERFORMANCE_OPTIMIZATION|SaaSArchitectGPT]]
 
 ---
 
@@ -246,7 +275,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 3  
 **Dependências:** US-003  
-**Responsável:** SaaSArchitectGPT
+**Responsável:** [[PERFORMANCE_OPTIMIZATION|SaaSArchitectGPT]]
 
 ---
 
@@ -264,7 +293,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 3  
 **Dependências:** US-013  
-**Responsável:** ResponsivoGPT
+**Responsável:** [[ACCESSIBILITY_VALIDATION|ResponsivoGPT]]
 
 ---
 
@@ -284,7 +313,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 2  
 **Dependências:** US-001  
-**Responsável:** DevOpsStackGPT
+**Responsável:** [[arquitetura|DevOpsStackGPT]]
 
 ---
 
@@ -302,7 +331,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 8  
 **Dependências:** US-015  
-**Responsável:** SaaSArchitectGPT
+**Responsável:** [[PERFORMANCE_OPTIMIZATION|SaaSArchitectGPT]]
 
 ---
 
@@ -320,7 +349,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 5  
 **Dependências:** US-016  
-**Responsável:** SaaSArchitectGPT
+**Responsável:** [[PERFORMANCE_OPTIMIZATION|SaaSArchitectGPT]]
 
 ---
 
@@ -340,7 +369,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 5  
 **Dependências:** US-005  
-**Responsável:** SaaSArchitectGPT
+**Responsável:** [[PERFORMANCE_OPTIMIZATION|SaaSArchitectGPT]]
 
 ---
 
@@ -358,7 +387,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 5  
 **Dependências:** US-003  
-**Responsável:** SaaSArchitectGPT
+**Responsável:** [[PERFORMANCE_OPTIMIZATION|SaaSArchitectGPT]]
 
 ---
 
@@ -376,7 +405,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 3  
 **Dependências:** US-019  
-**Responsável:** ResponsivoGPT
+**Responsável:** [[ACCESSIBILITY_VALIDATION|ResponsivoGPT]]
 
 ---
 
@@ -415,7 +444,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 5  
 **Dependências:** US-007, US-008  
-**Responsável:** SaaSArchitectGPT
+**Responsável:** [[PERFORMANCE_OPTIMIZATION|SaaSArchitectGPT]]
 
 ---
 
@@ -433,7 +462,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 8  
 **Dependências:** US-018, US-013  
-**Responsável:** SaaSArchitectGPT
+**Responsável:** [[PERFORMANCE_OPTIMIZATION|SaaSArchitectGPT]]
 
 ---
 
@@ -451,7 +480,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 3  
 **Dependências:** US-021  
-**Responsável:** ResponsivoGPT
+**Responsável:** [[ACCESSIBILITY_VALIDATION|ResponsivoGPT]]
 
 ---
 
@@ -471,7 +500,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 3  
 **Dependências:** US-024  
-**Responsável:** ResponsivoGPT
+**Responsável:** [[ACCESSIBILITY_VALIDATION|ResponsivoGPT]]
 
 ---
 
@@ -489,7 +518,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 5  
 **Dependências:** US-025  
-**Responsável:** ResponsivoGPT
+**Responsável:** [[ACCESSIBILITY_VALIDATION|ResponsivoGPT]]
 
 ---
 
@@ -507,7 +536,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 5  
 **Dependências:** US-026  
-**Responsável:** ResponsivoGPT
+**Responsável:** [[ACCESSIBILITY_VALIDATION|ResponsivoGPT]]
 
 ---
 
@@ -525,7 +554,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 8  
 **Dependências:** US-027  
-**Responsável:** ResponsivoGPT
+**Responsável:** [[ACCESSIBILITY_VALIDATION|ResponsivoGPT]]
 
 ---
 
@@ -545,7 +574,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 5  
 **Dependências:** US-028  
-**Responsável:** DevOpsStackGPT
+**Responsável:** [[arquitetura|DevOpsStackGPT]]
 
 ---
 
@@ -563,7 +592,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 3  
 **Dependências:** US-029  
-**Responsável:** DevOpsStackGPT
+**Responsável:** [[arquitetura|DevOpsStackGPT]]
 
 ---
 
@@ -601,7 +630,7 @@ Backlog detalhado do Design System OMNIVIS com user stories, critérios de aceit
 
 **Story Points:** 5  
 **Dependências:** US-031  
-**Responsável:** ObsidianArchitectGPT
+**Responsável:** ObsidianArchitectGPT + [[README|ReadmeGenGPT]]
 
 ---
 

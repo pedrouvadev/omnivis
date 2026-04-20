@@ -1,3 +1,32 @@
+<!--
+  =====================================================
+  Desenvolvido por: Pedro Uva (Mr. Uva)
+  Full-Stack Engineer & AI Strategist | Estrategista Digital
+  
+  Website: https://mruva.com.br/
+  LinkedIn: https://www.linkedin.com/in/mruva/
+  
+  Copyright © 2026 Pedro Uva. Todos os direitos reservados.
+  
+  Este repositório é público. Se você clonar, fizer fork ou utilizar
+  este código em seus projetos, por favor, mantenha este aviso de
+  créditos intacto no topo de cada arquivo.
+  
+  Agradeço pelo respeito ao meu trabalho e à minha contribuição
+  para a comunidade open-source.
+  
+  Excelência desde 1997 • +25 anos de experiência em Full-Stack,
+  Inteligência Artificial e estratégias digitais.
+  =====================================================
+-->
+
+---
+tags: [performance, otimizacao, lazy-loading, lighthouse, core-web-vitals, chunks]
+tipo: nota
+status: processado
+topico_principal: Otimização de Performance
+---
+
 # SaaSArchitectGPT - Otimização de Performance e Lazy Loading
 
 **Data:** 2026-04-19  
@@ -6,7 +35,7 @@
 
 ## Visão Geral
 
-Estratégia completa de otimização de performance para o Design System OMNIVIS, focando em lazy loading de componentes 3D/animações, code splitting e otimizações de renderização para atingir Lighthouse 100/100.
+Estratégia completa de otimização de performance para o [[DESIGN_TOKENS_IMPLEMENTATION|Design System OMNIVIS]], focando em [[PERFORMANCE_OPTIMIZATION|lazy loading]] de componentes 3D/animações, [[PERFORMANCE_OPTIMIZATION|code splitting]] e otimizações de renderização para atingir [[PERFORMANCE_OPTIMIZATION|Lighthouse]] 100/100.
 
 ## Otimizações Implementadas
 
@@ -27,7 +56,7 @@ manualChunks: {
 - ✅ Carregamento paralelo
 - ✅ Redução de bundle inicial
 
-### 2. Lazy Loading de Componentes 3D
+### 2. [[PERFORMANCE_OPTIMIZATION|Lazy Loading]] de Componentes 3D
 
 **Hero3D.tsx - Lazy Loading:**
 ```tsx
@@ -83,7 +112,7 @@ useEffect(() => {
 - ✅ `shadowMap` apenas quando necessário
 - ✅ `frustumCulling` habilitado
 
-### 4. Lazy Loading de Animações
+### 4. [[PERFORMANCE_OPTIMIZATION|Lazy Loading]] de Animações
 
 **SmoothScroll.tsx - Lazy Loading:**
 ```tsx
@@ -107,7 +136,7 @@ function App() {
 - ✅ GSAP carregado sob demanda
 - ✅ Fallback para scroll nativo
 
-### 5. Code Splitting por Rota
+### 5. [[PERFORMANCE_OPTIMIZATION|Code Splitting]] por Rota
 
 **Astro Islands Architecture:**
 ```astro
@@ -122,7 +151,7 @@ const Hero3D = await import('../components/Hero3D').then(m => m.default);
 - ✅ JavaScript mínimo onde não necessário
 - ✅ Performance extrema
 
-### 6. Otimizações de CSS
+### 6. [[PERFORMANCE_OPTIMIZATION|Otimizações de CSS]]
 
 **Critical CSS Inline:**
 - ✅ Design tokens críticos inline
@@ -134,7 +163,7 @@ const Hero3D = await import('../components/Hero3D').then(m => m.default);
 - ✅ CSS minificado no build
 - ✅ Remoção de unused CSS
 
-### 7. Otimizações de Imagens
+### 7. [[PERFORMANCE_OPTIMIZATION|Otimizações de Imagens]]
 
 **Formato Moderno:**
 - ✅ WebP/AVIF suportado
@@ -152,7 +181,7 @@ const Hero3D = await import('../components/Hero3D').then(m => m.default);
 />
 ```
 
-### 8. Otimizações de Fontes
+### 8. [[PERFORMANCE_OPTIMIZATION|Otimizações de Fontes]]
 
 **Font Display:**
 ```css
@@ -167,7 +196,7 @@ const Hero3D = await import('../components/Hero3D').then(m => m.default);
 - ✅ Texto visível imediatamente
 - ✅ Font swap suave
 
-### 9. Otimizações de JavaScript
+### 9. [[PERFORMANCE_OPTIMIZATION|Otimizações de JavaScript]]
 
 **Tree Shaking:**
 - ✅ Tailwind CSS purge

@@ -1,3 +1,32 @@
+<!--
+  =====================================================
+  Desenvolvido por: Pedro Uva (Mr. Uva)
+  Full-Stack Engineer & AI Strategist | Estrategista Digital
+  
+  Website: https://mruva.com.br/
+  LinkedIn: https://www.linkedin.com/in/mruva/
+  
+  Copyright © 2026 Pedro Uva. Todos os direitos reservados.
+  
+  Este repositório é público. Se você clonar, fizer fork ou utilizar
+  este código em seus projetos, por favor, mantenha este aviso de
+  créditos intacto no topo de cada arquivo.
+  
+  Agradeço pelo respeito ao meu trabalho e à minha contribuição
+  para a comunidade open-source.
+  
+  Excelência desde 1997 • +25 anos de experiência em Full-Stack,
+  Inteligência Artificial e estratégias digitais.
+  =====================================================
+-->
+
+---
+tags: [padroes, codigo, desenvolvimento, typescript, convencoes, boas-praticas]
+tipo: referencia
+status: processado
+topico_principal: Padrões de Código
+---
+
 # Padrões de Código e Desenvolvimento - OMNIVIS
 
 ## Padrões Gerais
@@ -542,10 +571,10 @@ Antes de fazer merge de um PR, verifique:
 - [ ] TypeScript strict mode sem erros
 - [ ] Error handling implementado
 - [ ] Validação de dados presente
-- [ ] Acessibilidade verificada (WCAG AAA)
-- [ ] Performance otimizada
+- [ ] [[ACCESSIBILITY_VALIDATION|Acessibilidade verificada (WCAG AAA)]]
+- [ ] [[PERFORMANCE_OPTIMIZATION|Performance otimizada]]
 - [ ] Testes escritos (se aplicável)
-- [ ] Commits seguem Conventional Commits
+- [ ] [[padroes|Commits seguem Conventional Commits]]
 - [ ] Documentação atualizada
 - [ ] Variáveis de ambiente documentadas
 - [ ] Segurança verificada (sanitização, auth)

@@ -1,3 +1,32 @@
+<!--
+  =====================================================
+  Desenvolvido por: Pedro Uva (Mr. Uva)
+  Full-Stack Engineer & AI Strategist | Estrategista Digital
+  
+  Website: https://mruva.com.br/
+  LinkedIn: https://www.linkedin.com/in/mruva/
+  
+  Copyright © 2026 Pedro Uva. Todos os direitos reservados.
+  
+  Este repositório é público. Se você clonar, fizer fork ou utilizar
+  este código em seus projetos, por favor, mantenha este aviso de
+  créditos intacto no topo de cada arquivo.
+  
+  Agradeço pelo respeito ao meu trabalho e à minha contribuição
+  para a comunidade open-source.
+  
+  Excelência desde 1997 • +25 anos de experiência em Full-Stack,
+  Inteligência Artificial e estratégias digitais.
+  =====================================================
+-->
+
+---
+tags: [accessibility, wcag, wcag-aaa, validacao, responsivo, a11y]
+tipo: nota
+status: processado
+topico_principal: Validação de Acessibilidade
+---
+
 # ResponsivoGPT - Validação de Acessibilidade WCAG AAA
 
 **Data:** 2026-04-19  
@@ -6,7 +35,7 @@
 
 ## Visão Geral
 
-Validação completa de acessibilidade do Design System OMNIVIS conforme WCAG 2.1 Level AAA, garantindo que o sistema seja utilizável por todos os usuários, independentemente de suas capacidades.
+Validação completa de acessibilidade do Design System OMNIVIS conforme [[ACCESSIBILITY_VALIDATION|WCAG 2.1 Guidelines]] o sistema seja utilizável por todos os usuários, independentemente de suas capacidades.
 
 ## Padrões WCAG AAA Validados
 
@@ -26,7 +55,7 @@ Validação completa de acessibilidade do Design System OMNIVIS conforme WCAG 2.
 
 **Dark Mode**
 - ✅ **Requisito:** Contraste mínimo 7:1
-- ✅ **Implementação:** Cores desaturadas com contraste validado
+- ✅ **Implementação:** [[ACCESSIBILITY_VALIDATION|WebAIM Contrast Checker]] validado
 
 ### 2. Tamanho de Texto
 
@@ -189,7 +218,7 @@ Validação completa de acessibilidade do Design System OMNIVIS conforme WCAG 2.
 
 ### Automatizadas
 - ✅ **axe DevTools:** Extensão Chrome
-- ✅ **Lighthouse:** Accessibility audit
+- ✅ [[PERFORMANCE_OPTIMIZATION|Lighthouse]]:** Accessibility audit
 - ✅ **WAVE:** Web Accessibility Evaluation Tool
 - ✅ **pa11y:** Automatizado no CI/CD
 
@@ -203,7 +232,7 @@ Validação completa de acessibilidade do Design System OMNIVIS conforme WCAG 2.
 
 ### Before Deploy
 - [ ] Executar axe DevTools em todas as páginas
-- [ ] Executar Lighthouse accessibility audit
+- [ ] Executar [[PERFORMANCE_OPTIMIZATION|Lighthouse]] accessibility audit
 - [ ] Testar navegação por teclado
 - [ ] Testar com screen reader
 - [ ] Validar contrast ratios manualmente
@@ -215,14 +244,14 @@ Validação completa de acessibilidade do Design System OMNIVIS conforme WCAG 2.
 
 ### Continuous
 - [ ] Integrar axe no CI/CD
-- [ ] Monitorar Lighthouse scores
+- [ ] Monitorar [[PERFORMANCE_OPTIMIZATION|Lighthouse]] scores
 - [ ] Testar com usuários reais (quando possível)
 - [ ] Atualizar documentação
 
 ## Recomendações
 
 ### Imediatas
-1. **Instalar axe DevTools** para validação contínua
+1. **Instalar [[ACCESSIBILITY_VALIDATION|axe DevTools]]** para validação contínua
 2. **Adicionar testes E2E** com Playwright accessibility
 3. **Documentar padrões** para novos componentes
 

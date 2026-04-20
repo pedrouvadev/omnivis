@@ -1,11 +1,40 @@
+<!--
+  =====================================================
+  Desenvolvido por: Pedro Uva (Mr. Uva)
+  Full-Stack Engineer & AI Strategist | Estrategista Digital
+  
+  Website: https://mruva.com.br/
+  LinkedIn: https://www.linkedin.com/in/mruva/
+  
+  Copyright © 2026 Pedro Uva. Todos os direitos reservados.
+  
+  Este repositório é público. Se você clonar, fizer fork ou utilizar
+  este código em seus projetos, por favor, mantenha este aviso de
+  créditos intacto no topo de cada arquivo.
+  
+  Agradeço pelo respeito ao meu trabalho e à minha contribuição
+  para a comunidade open-source.
+  
+  Excelência desde 1997 • +25 anos de experiência em Full-Stack,
+  Inteligência Artificial e estratégias digitais.
+  =====================================================
+-->
+
+---
+tags: [changelog, versoes, historico-mudancas, releases, semver]
+tipo: nota
+status: processado
+topico_principal: Histórico de Versões do Projeto
+---
+
 # Changelog
 
 ## [1.0.13] - 2026-04-19
 
 ### Added
 - Documentação OpenAPI/Swagger completa da API (swagger.json)
-- Documentação técnica interna (docs/arquitetura.md)
-- Documentação de padrões de código (docs/padroes.md)
+- Documentação técnica interna ([[arquitetura]])
+- Documentação de padrões de código ([[padroes]])
 - Relatório de validação do desenvolvimento (Documentação/_PLANO_DEV/RELATORIO_VALIDACAO_DESENVOLVIMENTO.md)
 
 ### Fixed
@@ -14,7 +43,7 @@
 - Criação de dados via API validada
 
 ### Changed
-- PROJECT_STATUS.md atualizado com tarefas completadas por especialistas
+- [[PROJECT_STATUS]] atualizado com tarefas completadas por especialistas
 - Estado atualizado para "EM FINALIZAÇÃO - v1.0.13"
 
 ## [1.0.12] - 2026-04-19

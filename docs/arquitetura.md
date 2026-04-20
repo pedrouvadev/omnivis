@@ -1,16 +1,45 @@
+<!--
+  =====================================================
+  Desenvolvido por: Pedro Uva (Mr. Uva)
+  Full-Stack Engineer & AI Strategist | Estrategista Digital
+  
+  Website: https://mruva.com.br/
+  LinkedIn: https://www.linkedin.com/in/mruva/
+  
+  Copyright © 2026 Pedro Uva. Todos os direitos reservados.
+  
+  Este repositório é público. Se você clonar, fizer fork ou utilizar
+  este código em seus projetos, por favor, mantenha este aviso de
+  créditos intacto no topo de cada arquivo.
+  
+  Agradeço pelo respeito ao meu trabalho e à minha contribuição
+  para a comunidade open-source.
+  
+  Excelência desde 1997 • +25 anos de experiência em Full-Stack,
+  Inteligência Artificial e estratégias digitais.
+  =====================================================
+-->
+
+---
+tags: [arquitetura, tecnica, backend, frontend, monorepo, turborepo]
+tipo: referencia
+status: processado
+topico_principal: Arquitetura Técnica
+---
+
 # Arquitetura Técnica - OMNIVIS
 
 ## Visão Geral
 
-OMNIVIS é um sistema monorepo construído com Turborepo, utilizando uma arquitetura de componentes modernos com separação clara entre frontend e backend, compartilhando tipos TypeScript através de um pacote dedicado.
+[[README|OMNIVIS]] é um sistema [[PERFORMANCE_OPTIMIZATION|monorepo]] construído com Turborepo, utilizando uma arquitetura de componentes modernos com separação clara entre frontend e backend, compartilhando tipos TypeScript através de um pacote dedicado.
 
 ## Estrutura do Monorepo
 
 ```
 omnivis/
 ├── apps/
-│   ├── backend/          # API Express + Prisma + PostgreSQL
-│   └── frontend/         # Astro + React + Tailwind
+│   ├── `apps/backend/`          # API [[SETUP_DATABASE|Express + Prisma + PostgreSQL]]
+│   └── `apps/frontend/`         # [[STACK_UPDATE_INSTRUCTIONS|Astro + React + Tailwind]]
 ├── packages/
 │   ├── types/            # Tipos TypeScript compartilhados
 │   └── ui/               # Componentes UI compartilhados

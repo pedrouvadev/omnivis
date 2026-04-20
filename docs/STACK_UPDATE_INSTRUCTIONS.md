@@ -1,3 +1,32 @@
+<!--
+  =====================================================
+  Desenvolvido por: Pedro Uva (Mr. Uva)
+  Full-Stack Engineer & AI Strategist | Estrategista Digital
+  
+  Website: https://mruva.com.br/
+  LinkedIn: https://www.linkedin.com/in/mruva/
+  
+  Copyright © 2026 Pedro Uva. Todos os direitos reservados.
+  
+  Este repositório é público. Se você clonar, fizer fork ou utilizar
+  este código em seus projetos, por favor, mantenha este aviso de
+  créditos intacto no topo de cada arquivo.
+  
+  Agradeço pelo respeito ao meu trabalho e à minha contribuição
+  para a comunidade open-source.
+  
+  Excelência desde 1997 • +25 anos de experiência em Full-Stack,
+  Inteligência Artificial e estratégias digitais.
+  =====================================================
+-->
+
+---
+tags: [stack, atualizacao, instalacao, dependencias, astro, tailwind, threejs]
+tipo: referencia
+status: processado
+topico_principal: Atualização de Stack Tecnológico
+---
+
 # Atualização do Stack Tecnológico - Instruções de Instalação
 
 ## Visão Geral
@@ -231,9 +260,9 @@ Após a instalação:
 
 ## Referências
 
-- [Astro 5 Documentation](https://docs.astro.build/)
-- [Tailwind CSS v4 Documentation](https://tailwindcss.com/docs/v4-beta)
-- [Three.js Documentation](https://threejs.org/docs/)
-- [React Three Fiber Documentation](https://docs.pmnd.rs/react-three-fiber)
-- [GSAP Documentation](https://greensock.com/docs/)
-- [Lenis Documentation](https://github.com/studio-freight/lenis)
+- [[STACK_UPDATE_INSTRUCTIONS|Astro 5 Documentation]]
+- [[DESIGN_TOKENS_IMPLEMENTATION|Tailwind CSS v4 Documentation]]
+- [[HERO_PAGE_IMPLEMENTATION|Three.js Documentation]]
+- [[HERO_PAGE_IMPLEMENTATION|React Three Fiber Documentation]]
+- [[HERO_PAGE_IMPLEMENTATION|GSAP Documentation]]
+- [[HERO_PAGE_IMPLEMENTATION|Lenis Documentation]]

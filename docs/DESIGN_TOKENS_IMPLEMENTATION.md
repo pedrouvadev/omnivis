@@ -1,3 +1,32 @@
+<!--
+  =====================================================
+  Desenvolvido por: Pedro Uva (Mr. Uva)
+  Full-Stack Engineer & AI Strategist | Estrategista Digital
+  
+  Website: https://mruva.com.br/
+  LinkedIn: https://www.linkedin.com/in/mruva/
+  
+  Copyright © 2026 Pedro Uva. Todos os direitos reservados.
+  
+  Este repositório é público. Se você clonar, fizer fork ou utilizar
+  este código em seus projetos, por favor, mantenha este aviso de
+  créditos intacto no topo de cada arquivo.
+  
+  Agradeço pelo respeito ao meu trabalho e à minha contribuição
+  para a comunidade open-source.
+  
+  Excelência desde 1997 • +25 anos de experiência em Full-Stack,
+  Inteligência Artificial e estratégias digitais.
+  =====================================================
+-->
+
+---
+tags: [design-tokens, css, tailwind, estilizacao, design-system, tokens]
+tipo: referencia
+status: processado
+topico_principal: Design Tokens e Estilização
+---
+
 # OMNIVIS Design Tokens - Guia de Implementação
 
 ## Visão Geral
@@ -367,5 +396,5 @@ Após implementar os Design Tokens:
 ## Referências
 
 - [Design Tokens W3C Community Group](https://www.w3.org/community/design-tokens/)
-- [WCAG 2.1 Guidelines](https://www.w3.org/WAI/WCAG21/quickref/)
-- [Astro View Transitions](https://docs.astro.build/en/guides/view-transitions/)
+- [[ACCESSIBILITY_VALIDATION|WCAG 2.1 Guidelines]]
+- [[STACK_UPDATE_INSTRUCTIONS|Astro View Transitions]]

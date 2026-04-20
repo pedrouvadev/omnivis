@@ -1,3 +1,32 @@
+<!--
+  =====================================================
+  Desenvolvido por: Pedro Uva (Mr. Uva)
+  Full-Stack Engineer & AI Strategist | Estrategista Digital
+  
+  Website: https://mruva.com.br/
+  LinkedIn: https://www.linkedin.com/in/mruva/
+  
+  Copyright © 2026 Pedro Uva. Todos os direitos reservados.
+  
+  Este repositório é público. Se você clonar, fizer fork ou utilizar
+  este código em seus projetos, por favor, mantenha este aviso de
+  créditos intacto no topo de cada arquivo.
+  
+  Agradeço pelo respeito ao meu trabalho e à minha contribuição
+  para a comunidade open-source.
+  
+  Excelência desde 1997 • +25 anos de experiência em Full-Stack,
+  Inteligência Artificial e estratégias digitais.
+  =====================================================
+-->
+
+---
+tags: [sprint-planning, agil, scrum, timeline, roadmap, sprints]
+tipo: nota
+status: processado
+topico_principal: Planejamento de Sprints
+---
+
 # ScrumMasterTechGPT - Planejamento de Sprints - Design System OMNIVIS
 
 **Data:** 2026-04-19  
@@ -20,7 +49,7 @@ Planejamento de sprints para implementação do Design System OMNIVIS, organizan
 - [ ] Configurar TypeScript strict mode
 - [ ] Validar build sem erros
 
-**Responsável:** DevOpsStackGPT + TechLeadGPT
+**Responsável:** DevOpsStackGPT + [[TECHLEAD_REVIEW|TechLeadGPT]]
 
 **Dependências:** Nenhuma
 
@@ -37,7 +66,7 @@ Planejamento de sprints para implementação do Design System OMNIVIS, organizan
 - [ ] Testar dark mode toggle
 - [ ] Validar contrast ratios
 
-**Responsável:** SaaSArchitectGPT + ResponsivoGPT
+**Responsável:** [[PERFORMANCE_OPTIMIZATION|SaaSArchitectGPT]] + [[ACCESSIBILITY_VALIDATION|ResponsivoGPT]]
 
 **Dependências:** Sprint 0
 
@@ -54,7 +83,7 @@ Planejamento de sprints para implementação do Design System OMNIVIS, organizan
 - [ ] Criar componente Dropdown
 - [ ] Criar componente Badge
 
-**Responsável:** SaaSArchitectGPT + ResponsivoGPT
+**Responsável:** [[PERFORMANCE_OPTIMIZATION|SaaSArchitectGPT]] + [[ACCESSIBILITY_VALIDATION|ResponsivoGPT]]
 
 **Dependências:** Sprint 1
 
@@ -70,7 +99,7 @@ Planejamento de sprints para implementação do Design System OMNIVIS, organizan
 - [ ] Testar touch targets (48x48px)
 - [ ] Validar consistência visual
 
-**Responsável:** SaaSArchitectGPT + ResponsivoGPT
+**Responsável:** [[PERFORMANCE_OPTIMIZATION|SaaSArchitectGPT]] + [[ACCESSIBILITY_VALIDATION|ResponsivoGPT]]
 
 **Dependências:** Sprint 1
 
@@ -104,7 +133,7 @@ Planejamento de sprints para implementação do Design System OMNIVIS, organizan
 - [ ] Validar performance (60fps)
 - [ ] Testar reduced motion
 
-**Responsável:** SaaSArchitectGPT + ResponsivoGPT
+**Responsável:** [[PERFORMANCE_OPTIMIZATION|SaaSArchitectGPT]] + [[ACCESSIBILITY_VALIDATION|ResponsivoGPT]]
 
 **Dependências:** Sprint 1
 
@@ -140,7 +169,7 @@ Planejamento de sprints para implementação do Design System OMNIVIS, organizan
 - [ ] Testar reduced motion
 - [ ] Testar keyboard navigation
 
-**Responsável:** ResponsivoGPT + SaaSArchitectGPT
+**Responsável:** [[ACCESSIBILITY_VALIDATION|ResponsivoGPT]] + [[PERFORMANCE_OPTIMIZATION|SaaSArchitectGPT]]
 
 **Dependências:** Sprint 6
 
@@ -173,7 +202,7 @@ Planejamento de sprints para implementação do Design System OMNIVIS, organizan
 - [ ] Documentar Design Tokens
 - [ ] Criar changelog
 
-**Responsável:** ObsidianArchitectGPT + ReadmeGenGPT
+**Responsável:** ObsidianArchitectGPT + [[README|ReadmeGenGPT]]
 
 **Dependências:** Sprint 8
 
