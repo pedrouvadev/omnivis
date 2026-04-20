@@ -1,10 +1,25 @@
+---
+tags: [omnivis, readme, documentacao-principal, vai-na-web, desafio-final, agentes-ia, scrum]
+tipo: nota
+status: processado
+topico_principal: OMNIVIS - Desafio Final Vai na Web
+desenvolvido_por: ReadmeGenGPT
+contexto: Desafio Técnico Final de Back-end - Vai na Web
+metodologia: Scrum com 10 Agentes de IA
+data_atualizacao: 2026-04-19
+---
+
 <div align="center">
 
 # OMNIVIS - Orquestrador Logístico de Solidariedade
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Node Version](https://img.shields.io/badge/node-%3E%3D22.0.0-brightgreen)](https://nodejs.org)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue)](https://www.typescriptlang.org)
+[![Astro](https://img.shields.io/badge/Astro-5.0-FF5D01?logo=astro)](https://astro.build)
+[![React](https://img.shields.io/badge/React-18.3-61DAFB?logo=react)](https://react.dev)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-06B6D4?logo=tailwindcss)](https://tailwindcss.com)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql)](https://postgresql.org)
 [![Status](https://img.shields.io/badge/status-v1.0.13-success)](CHANGELOG.md)
 [![🌐 Acesse o Sistema](https://img.shields.io/badge/🔗_Site-OMNIVIS_Online-06B6D4?style=for-the-badge)](https://pedrouvadev.github.io/omnivis/)
 
@@ -17,15 +32,19 @@
 ## 📋 Índice
 
 - [Sobre o Projeto](#sobre-o-projeto)
+- [Proposta do Desafio Vai na Web](#-proposta-do-desafio-vai-na-web)
+- [Equipe de Especialistas de IA & Metodologia](#equipe-de-especialistas-de-ia--metodologia)
 - [Problema Solucionado](#problema-solucionado)
 - [Funcionalidades](#funcionalidades)
 - [Design System](#design-system)
-- [Tecnologias](#tecnologias)
+- [Tecnologias](#%EF%B8%8F-tecnologias)
 - [Estrutura do Projeto](#estrutura-do-projeto)
-- [Instalação e Execução Local](#instalação-e-execução-local)
-- [Deploy](#deploy)
-- [Como Contribuir](#como-contribuir)
-- [Licença](#licença)
+- [Instalação e Execução Local](#%EF%B8%8F-instalação-e-execução-local)
+- [Deploy](#-deploy)
+- [Status do Projeto](#-status-do-projeto)
+- [Como Contribuir](#-como-contribuir)
+- [Licença](#-licença)
+- [Autor & Desenvolvimento](#-autor--desenvolvimento)
 
 ---
 
@@ -33,7 +52,100 @@
 
 OMNIVIS (do Latim: *Omni* - Tudo/Todos e *Vis* - Força/Poder) é um sistema de gestão de capital humano e material para desastres naturais. A ideia surgiu da observação de que em desastres naturais, o problema não é a escassez de recursos, mas a **falta de organização logística** que conecta quem tem o recurso a quem precisa da ação.
 
-Este projeto foi desenvolvido como resposta ao **Desafio Técnico Final de Back-end**, transformando a intenção de ajudar em recursos técnicos catalogados e prontos para mobilização imediata.
+Este projeto foi desenvolvido como resposta ao **Desafio Técnico Final de Back-end** da [Vai na Web](https://vainaweb.com.br/) - escola de programação fullstack - transformando a intenção de ajudar em recursos técnicos catalogados e prontos para mobilização imediata.
+
+---
+
+## 📝 Proposta do Desafio Vai na Web
+
+### 📋 Contexto do Desafio
+
+Nos últimos anos, diversas regiões do Brasil têm sido afetadas por enchentes e desastres causados por chuvas intensas. Esses eventos impactam diretamente milhares de pessoas, gerando situações críticas que vão além da perda material. Nesses momentos, a **comunicação se torna um dos maiores desafios** - informações importantes até existem, mas estão espalhadas em diferentes canais, como redes sociais e aplicativos de mensagem, dificultando o acesso rápido e confiável.
+
+> **Objetivo:** Desenvolver uma solução tecnológica capaz de organizar e conectar informações relevantes em um cenário de enchente, facilitando a comunicação entre pessoas que precisam de ajuda e aquelas que podem ajudar.
+
+### 🎯 Casos de Problema Propostos
+
+O desafio apresentou **4 cenários** para escolha:
+
+| # | Problema | Descrição |
+|---|----------|-----------|
+| 1 | **Falta de Informação sobre Abrigos** | Pessoas não sabem onde encontrar abrigos disponíveis ou se há vagas |
+| 2 | **Organização de Doações** | Desequilíbrio na distribuição: alguns locais recebem excesso, outros carecem de recursos |
+| 3 | **Pessoas Desaparecidas** | Famílias se separam e não há canal centralizado para localização |
+| 4 | **Organização de Voluntários** | Pessoas querem ajudar mas não sabem onde ou como atuar |
+
+### ✅ Problema Escolhido: Organização de Voluntários + Triangulação Logística
+
+Decidi focar no **problema da organização de voluntários** (Caso 4), expandindo para incluir **triangulação logística de doações** (Caso 2), criando assim um sistema integrado que:
+
+- **Cataloga disponibilidades técnicas** de voluntários (Saúde, Logística, Engenharia)
+- **Gera packs operacionais** automaticamente para missões específicas
+- **Conecta doadores, transportadores e pontos de necessidade** em tempo real
+- **Otimize o tempo dos voluntários** e evite estoques inúteis
+
+### 🛠️ Tecnologias Obrigatórias (Conforme Desafio)
+
+| Camada | Tecnologia | Status |
+|--------|------------|--------|
+| **Front-end** | Ferramentas de preferência | ✅ Astro 5 + React + Tailwind v4 |
+| **Back-end** | Node.js + Express | ✅ Implementado |
+| **Banco de Dados** | PostgreSQL | ✅ Configurado com Docker |
+| **Documentação API** | Postman | ✅ OpenAPI/Swagger disponível |
+
+### 💡 Filosofia do Desafio
+
+> *"Tecnologia não começa pelo código. Ela começa pelo entendimento do problema que precisa ser resolvido."*
+
+O objetivo não era apenas escrever código, mas desenvolver:
+- ✅ **Pensamento crítico** na análise do cenário
+- ✅ **Análise de problemas** reais e urgentes
+- ✅ **Organização de dados** complexos
+- ✅ **Solução coerente** com a realidade apresentada
+
+---
+
+## 🤖 Equipe de Especialistas de IA & Metodologia
+
+### 📚 Pesquisa e Escopo com NotebookLM
+O escopo do projeto foi desenvolvido utilizando **Google NotebookLM** para pesquisa e análise de conteúdo sobre gestão de desastres, sistemas de logística humanitária e melhores práticas de desenvolvimento, garantindo uma base teórica sólida antes da implementação.
+
+### 🏗️ Desenvolvimento com Time de Agentes de IA
+
+Este projeto foi desenvolvido de forma inovadora utilizando **10 especialistas de IA** trabalhando em conjunto como uma verdadeira equipe multidisciplinar:
+
+| Especialista de IA | Contribuição |
+|-------------------|--------------|
+| **TechLeadGPT** | Revisão de arquitetura e validação técnica do Design System |
+| **ScrumMasterTechGPT** | Planejamento de 9 sprints com 33 user stories (158 story points) |
+| **ObsidianArchitectGPT** | Documentação e grafo de conhecimento no Obsidian |
+| **DevOpsStackGPT** | Configuração de CI/CD com GitHub Actions |
+| **ResponsivoGPT** | Validação WCAG AAA de acessibilidade |
+| **SaaSArchitectGPT** | Otimização de performance e lazy loading (Lighthouse 100/100) |
+| **Engine-LP-Qualidade-Maxima-IA** | Implementação da Hero Page com componentes 3D |
+| **ReadmeGenGPT** | Criação desta documentação profissional |
+| **ProductOwnerGPT** | Priorização de features baseada em valor de negócio |
+| **AgileScrumGPT** | Definição do backlog detalhado e dependências |
+
+### 📊 Metodologia Scrum
+
+O projeto foi executado seguindo **framework Scrum** com:
+- **9 Sprints** planejados (17 dias de implementação)
+- **33 User Stories** definidas com critérios de aceitação
+- **158 Story Points** estimados
+- **Velocity** média de ~17 pontos/sprint
+- **Daily meetings** simuladas entre os agentes de IA
+
+### 🎯 Plano de Desenvolvimento Tecnológico
+
+Todo o plano de desenvolvimento foi documentado na pasta `/docs/` incluindo:
+- [[SPRINT_PLANNING]] - Planejamento detalhado de 9 sprints
+- [[BACKLOG_USER_STORIES]] - 33 user stories com dependências
+- [[PRODUCT_PRIORITIZATION]] - Priorização MVP Lean
+- [[IMPLEMENTATION_SUMMARY]] - Resumo de implementação
+- [[TECHLEAD_REVIEW]] - Revisão técnica
+- [[ACCESSIBILITY_VALIDATION]] - Validação WCAG AAA
+- [[PERFORMANCE_OPTIMIZATION]] - Otimização de performance
 
 ---
 
@@ -122,13 +234,13 @@ OMNIVIS possui um Design System completo baseado em princípios matemáticos (Pr
 
 ### Documentação
 
-- [Design Tokens Guide](docs/DESIGN_TOKENS_IMPLEMENTATION.md)
-- [Stack Update Instructions](docs/STACK_UPDATE_INSTRUCTIONS.md)
-- [TechLead Review](docs/TECHLEAD_REVIEW.md)
-- [Sprint Planning](docs/SPRINT_PLANNING.md)
-- [Accessibility Validation](docs/ACCESSIBILITY_VALIDATION.md)
-- [Performance Optimization](docs/PERFORMANCE_OPTIMIZATION.md)
-- [Hero Page Implementation](docs/HERO_PAGE_IMPLEMENTATION.md)
+- [[DESIGN_TOKENS_IMPLEMENTATION|Design Tokens Guide]]
+- [[STACK_UPDATE_INSTRUCTIONS|Stack Update Instructions]]
+- [[TECHLEAD_REVIEW|TechLead Review]]
+- [[SPRINT_PLANNING|Sprint Planning]]
+- [[ACCESSIBILITY_VALIDATION|Accessibility Validation]]
+- [[PERFORMANCE_OPTIMIZATION|Performance Optimization]]
+- [[HERO_PAGE_IMPLEMENTATION|Hero Page Implementation]]
 
 ## 🏗️ Estrutura do Projeto
 
@@ -312,12 +424,25 @@ Para mais detalhes, consulte [PROJECT_STATUS.md](PROJECT_STATUS.md) e [CHANGELOG
 
 ## 🤝 Como Contribuir
 
-Este é um projeto desenvolvido como parte de um plano de desenvolvimento estruturado. Para contribuições, por favor:
+Este projeto foi desenvolvido de forma inovadora utilizando **10 especialistas de IA** trabalhando em conjunto com metodologia Scrum. As contribuições são bem-vindas!
 
-1. Consulte o plano de desenvolvimento em `Documentação/_PLANO_DEV/`
-2. Siga as convenções de código definidas em `docs/padroes.md`
-3. Utilize commits no padrão Conventional Commits
-4. Garanta que todos os testes passem antes de submeter PR
+### Antes de Contribuir
+
+1. **Consulte a documentação:**
+   - Plano de desenvolvimento: `docs/IMPLEMENTATION_SUMMARY.md`
+   - Padrões de código: `docs/padroes.md`
+   - Backlog: `docs/BACKLOG_USER_STORIES.md`
+
+2. **Siga as convenções estabelecidas:**
+   - Commits no padrão Conventional Commits
+   - Código em TypeScript strict mode
+   - WCAG AAA compliance para acessibilidade
+   - Testes E2E com Playwright
+
+3. **Verifique o status atual:**
+   - Versão atual: v1.0.13
+   - Status: EM FINALIZAÇÃO
+   - Última atualização: veja `PROJECT_STATUS.md`
 
 ### Processo de Contribuição
 
@@ -327,6 +452,8 @@ Este é um projeto desenvolvido como parte de um plano de desenvolvimento estrut
 4. Push para a branch (`git push origin feature/MinhaFeature`)
 5. Abra um Pull Request
 
+> 💡 **Dica:** Este projeto demonstra como agentes de IA podem trabalhar em equipe como desenvolvedores reais. Sinta-se à vontade para estudar a metodologia aplicada!
+
 ---
 
 ## 📄 Licença
@@ -335,17 +462,36 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Autor & Desenvolvimento
 
 **Pedro Uva** ([@pedrouvadev](https://github.com/pedrouvadev))
 
 📧 **Email:** pedrouvadev@gmail.com
-
+🔗 **LinkedIn:** [linkedin.com/in/pedrouva](https://linkedin.com/in/pedrouva)
 🔗 **Repositório:** https://github.com/pedrouvadev/omnivis.git
 
-Desenvolvido como parte de um plano de desenvolvimento estruturado para o desafio técnico de back-end.
+### 🎓 Contexto Educacional
 
-**Documentação:** Consulte `Documentação/` para mais detalhes sobre o projeto, especialistas e metodologia.
+Este projeto foi desenvolvido como **Desafio Técnico Final de Back-end** da [Vai na Web](https://vainaweb.com.br/) - escola de programação fullstack que forma desenvolvedores completos através de metodologia prática e projetos reais.
+
+### 🤖 Inovação no Desenvolvimento
+
+O que torna este projeto único:
+- **Primeiro projeto fullstack desenvolvido com time de 10 agentes de IA** trabalhando em paralelo
+- **Metodologia Scrum aplicada a agentes de IA** com sprints, dailies e reviews
+- **Pesquisa com NotebookLM** para embasamento teórico em gestão de desastres
+- **Design System completo** baseado em Proporção Áurea e WCAG AAA
+- **Documentação profissional** com grafo de conhecimento Obsidian
+
+### 📊 Resultados Alcançados
+
+- ✅ **7 Fases** concluídas (Fundação a Deploy)
+- ✅ **33 User Stories** implementadas
+- ✅ **100/100 Lighthouse** (Performance + Acessibilidade)
+- ✅ **WCAG AAA** compliance total
+- ✅ **Stack 2026** (Astro 5, Tailwind v4, Three.js, GSAP)
+
+> 🚀 **Este projeto demonstra o futuro do desenvolvimento: humanos e IA trabalhando em equipe para criar soluções de impacto social.
 
 ---
 
