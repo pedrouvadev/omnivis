@@ -1,0 +1,85 @@
+/**
+ * OMNIVIS Design Tokens - Fundamentos Matemáticos e Grid
+ * Base: Proporção Áurea (φ = 1.618)
+ * Unidade base: 8px
+ */
+
+:root {
+  /* === Espaçamentos (Base × φ^n) === */
+  --space-0: 0px;
+  --space-1: 8px;    /* φ^0 */
+  --space-2: 12px;   /* φ^1 ≈ 12.92px */
+  --space-3: 20px;   /* φ^2 ≈ 20.94px */
+  --space-4: 32px;   /* φ^3 ≈ 33.89px */
+  --space-5: 56px;   /* φ^4 ≈ 54.83px */
+  --space-6: 88px;   /* φ^5 ≈ 88.72px */
+  --space-7: 144px;  /* φ^6 ≈ 143.5px */
+  --space-8: 232px;  /* φ^7 ≈ 232.2px */
+  --space-9: 376px;  /* φ^8 ≈ 376px */
+
+  /* === Grid System === */
+  --grid-max-width: 1440px;  /* φ^6 */
+  --grid-columns: 12;
+  --grid-gutter: 32px;        /* φ^3 */
+  --grid-margin-mobile: 56px; /* φ^4 */
+  --grid-margin-desktop: 88px; /* φ^5 */
+
+  /* === Container Queries === */
+  --container-xs: 320px;
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1440px;
+
+  /* === Border Radius (φ-based) === */
+  --radius-none: 0px;
+  --radius-sm: 4px;
+  --radius-md: 8px;   /* base */
+  --radius-lg: 12px;  /* φ^1 */
+  --radius-xl: 20px;  /* φ^2 */
+  --radius-2xl: 32px; /* φ^3 */
+  --radius-full: 9999px;
+
+  /* === Touch Targets (WCAG AAA) === */
+  --touch-target-mobile: 48px;
+  --touch-target-desktop: 44px;
+  --touch-target-kiosk: 64px;
+
+  /* === Z-Index Scale === */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+
+  /* === Transitions === */
+  --transition-fast: 150ms;
+  --transition-base: 200ms;
+  --transition-slow: 300ms;
+  --transition-slower: 500ms;
+
+  /* === Easing Curves (Custom Bezier) === */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* === Print Styles === */
+@media print {
+  :root {
+    --space-1: 8px;
+    --space-2: 12px;
+    --space-3: 16px;
+    --space-4: 24px;
+    --space-5: 32px;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+}

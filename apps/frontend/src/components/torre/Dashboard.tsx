@@ -42,14 +42,14 @@ const Dashboard: React.FC = () => {
   };
 
   const voluntariosFiltrados = voluntarios.filter((v) =>
-    filtroTipo ? v.disponibilidades.includes(filtroTipo) : true
+    filtroTipo ? v.disponibilidades.some((d) => d.tipo === filtroTipo) : true
   );
 
   if (loading) {
     return (
       <div className="space-y-4">
         {[1, 2, 3].map((i) => (
-          <div key={i} className="bg-gray-100 rounded-lg p-4 h-24 animate-pulse" />
+          <div key={i} className="bg-[rgba(15,23,42,0.6)] backdrop-blur-[12px] border border-white/10 rounded-xl p-4 h-24 animate-pulse" />
         ))}
       </div>
     );
@@ -57,8 +57,11 @@ const Dashboard: React.FC = () => {
 
   if (error) {
     return (
-      <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700">
-        {error}
+      <div className="omnivis-card border-[#EF4444]/30">
+        <div className="omnivis-card__icon bg-[#EF4444]/15">
+          <span className="text-2xl text-[#EF4444]">!</span>
+        </div>
+        <p className="text-[#EF4444] text-sm">{error}</p>
       </div>
     );
   }
@@ -66,13 +69,18 @@ const Dashboard: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Filtros */}
-      <div className="bg-white border rounded-lg p-4">
-        <h2 className="font-bold mb-4">Filtrar por Competência</h2>
-        <div className="flex flex-wrap gap-2">
+      <div className="omnivis-card">
+        <div className="omnivis-card__icon bg-[#06B6D4]/15">
+          <span className="text-xl text-[#06B6D4]">🔍</span>
+        </div>
+        <h2 className="omnivis-card__title">Filtrar por Competência</h2>
+        <div className="flex flex-wrap gap-2 mt-4">
           <button
             onClick={() => setFiltroTipo('')}
-            className={`px-4 py-2 rounded-lg min-h-[48px] md:min-h-[48px] lg:min-h-[64px] ${
-              filtroTipo === '' ? 'bg-blue-600 text-white' : 'bg-gray-100'
+            className={`px-4 py-2 rounded-lg min-h-[44px] text-sm font-semibold transition-all ${
+              filtroTipo === '' 
+                ? 'bg-gradient-to-r from-[#06B6D4] to-[#0891B2] text-white' 
+                : 'bg-white/5 border border-white/10 text-[#94A3B8] hover:border-[#06B6D4]/30'
             }`}
           >
             Todos
@@ -81,8 +89,10 @@ const Dashboard: React.FC = () => {
             <button
               key={tipo}
               onClick={() => setFiltroTipo(tipo)}
-              className={`px-4 py-2 rounded-lg min-h-[48px] md:min-h-[48px] lg:min-h-[64px] ${
-                filtroTipo === tipo ? 'bg-blue-600 text-white' : 'bg-gray-100'
+              className={`px-4 py-2 rounded-lg min-h-[44px] text-sm font-semibold transition-all ${
+                filtroTipo === tipo 
+                  ? 'bg-gradient-to-r from-[#06B6D4] to-[#0891B2] text-white' 
+                  : 'bg-white/5 border border-white/10 text-[#94A3B8] hover:border-[#06B6D4]/30'
               }`}
             >
               {tipo}
@@ -93,66 +103,70 @@ const Dashboard: React.FC = () => {
 
       {/* Estatísticas */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-          <p className="text-sm text-blue-600">Total Voluntários</p>
-          <p className="text-2xl font-bold text-blue-800">{voluntarios.length}</p>
+        <div className="omnivis-card hover:border-[#06B6D4]/30 p-4">
+          <p className="text-xs text-[#06B6D4] font-semibold uppercase tracking-wider mb-1">Total Voluntários</p>
+          <p className="text-3xl font-bold text-[#F8FAFC]">{voluntarios.length}</p>
         </div>
-        <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-          <p className="text-sm text-green-600">Saúde</p>
-          <p className="text-2xl font-bold text-green-800">
-            {voluntarios.filter((v) => v.disponibilidades.includes('Saude')).length}
+        <div className="omnivis-card hover:border-[#10B981]/30 p-4">
+          <p className="text-xs text-[#10B981] font-semibold uppercase tracking-wider mb-1">Saúde</p>
+          <p className="text-3xl font-bold text-[#F8FAFC]">
+            {voluntarios.filter((v) => v.disponibilidades.some((d) => d.tipo === 'Saude')).length}
           </p>
         </div>
-        <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-          <p className="text-sm text-yellow-600">Logística</p>
-          <p className="text-2xl font-bold text-yellow-800">
-            {voluntarios.filter((v) => v.disponibilidades.includes('Logistica')).length}
+        <div className="omnivis-card hover:border-[#F59E0B]/30 p-4">
+          <p className="text-xs text-[#F59E0B] font-semibold uppercase tracking-wider mb-1">Logística</p>
+          <p className="text-3xl font-bold text-[#F8FAFC]">
+            {voluntarios.filter((v) => v.disponibilidades.some((d) => d.tipo === 'Logistica')).length}
           </p>
         </div>
-        <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
-          <p className="text-sm text-purple-600">Engenharia</p>
-          <p className="text-2xl font-bold text-purple-800">
-            {voluntarios.filter((v) => v.disponibilidades.includes('Engenharia')).length}
+        <div className="omnivis-card hover:border-[#8B5CF6]/30 p-4">
+          <p className="text-xs text-[#8B5CF6] font-semibold uppercase tracking-wider mb-1">Engenharia</p>
+          <p className="text-3xl font-bold text-[#F8FAFC]">
+            {voluntarios.filter((v) => v.disponibilidades.some((d) => d.tipo === 'Engenharia')).length}
           </p>
         </div>
       </div>
 
       {/* Lista de Voluntários */}
-      <div className="bg-white border rounded-lg">
-        <div className="p-4 border-b">
-          <h2 className="font-bold">
+      <div className="omnivis-card">
+        <div className="flex items-center justify-between mb-4 pb-4 border-b border-white/10">
+          <h2 className="text-lg font-bold text-[#F8FAFC]">
             Voluntários ({voluntariosFiltrados.length})
           </h2>
         </div>
-        <div className="divide-y">
-          {voluntariosFiltrados.map((voluntario) => (
-            <div
-              key={voluntario.id}
-              className="p-4 hover:bg-gray-50 cursor-pointer min-h-[64px] flex items-center justify-between"
-            >
-              <div>
-                <h3 className="font-bold text-lg">{voluntario.nome}</h3>
-                <p className="text-sm text-gray-600">{voluntario.email}</p>
-                <p className="text-sm text-gray-600">{voluntario.telefone}</p>
-                <div className="flex gap-2 mt-2">
-                  {voluntario.disponibilidades.map((d) => (
-                    <span
-                      key={d.id}
-                      className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded"
-                    >
-                      {d.tipo}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <button 
-                onClick={() => setVoluntarioSelecionado(voluntario)}
-                className="px-4 py-2 bg-blue-600 text-white rounded-lg min-h-[48px]"
+        <div className="space-y-3">
+          {voluntariosFiltrados.length === 0 ? (
+            <p className="text-[#94A3B8] text-center py-8">Nenhum voluntário encontrado.</p>
+          ) : (
+            voluntariosFiltrados.map((voluntario) => (
+              <div
+                key={voluntario.id}
+                className="p-4 bg-white/5 border border-white/10 rounded-lg hover:border-[#06B6D4]/30 cursor-pointer transition-all flex items-center justify-between"
               >
-                Detalhes
-              </button>
-            </div>
-          ))}
+                <div>
+                  <h3 className="font-bold text-[#F8FAFC] text-lg">{voluntario.nome}</h3>
+                  <p className="text-sm text-[#94A3B8]">{voluntario.email}</p>
+                  <p className="text-sm text-[#64748B]">{voluntario.telefone}</p>
+                  <div className="flex gap-2 mt-2">
+                    {voluntario.disponibilidades.map((d) => (
+                      <span
+                        key={d.id}
+                        className="px-2 py-1 bg-[#06B6D4]/10 text-[#06B6D4] text-xs rounded font-medium"
+                      >
+                        {d.tipo}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <button 
+                  onClick={() => setVoluntarioSelecionado(voluntario)}
+                  className="inline-flex items-center justify-center text-center min-h-[44px] px-4 py-2 bg-gradient-to-r from-[#06B6D4] to-[#0891B2] text-white rounded-lg font-semibold hover:opacity-90 transition-all cursor-pointer text-sm"
+                >
+                  Detalhes
+                </button>
+              </div>
+            ))
+          )}
         </div>
       </div>
 

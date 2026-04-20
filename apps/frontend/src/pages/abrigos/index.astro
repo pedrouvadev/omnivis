@@ -1,22 +1,66 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { Icons } from '../../components/icons/OmnivisIcons';
 ---
 
 <Layout title="Abrigos - OMNIVIS">
-  <main class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold mb-6">Abrigos</h1>
-    
-    <div class="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
-      <h2 class="text-xl font-bold text-green-800 mb-2">Abrigos Disponíveis</h2>
-      <p class="text-green-700">Visualize abrigos disponíveis e necessidades atuais.</p>
+  <!-- Hero Section -->
+  <section class="relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-30">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.2),transparent_50%)]" />
     </div>
 
-    <div class="bg-white border rounded-lg p-6">
-      <h3 class="font-bold mb-4">Lista de Abrigos</h3>
-      <p class="text-gray-600">Nenhum abrigo cadastrado no momento.</p>
-      <p class="text-sm text-gray-500 mt-2">Funcionalidade em desenvolvimento - aguardando backend.</p>
-    </div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6 md:px-8 text-center">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#10B981]/10 border border-[#10B981]/20 mb-6">
+        <Icons.Home class="w-4 h-4 text-[#10B981]" />
+        <span class="text-sm font-medium text-[#10B981]">Status de Abrigos</span>
+      </div>
 
-    <a href="/" class="text-green-600 hover:text-green-800 mt-4 inline-block">Voltar para Home</a>
-  </main>
+      <h1 class="text-4xl md:text-5xl font-bold text-[#F8FAFC] mb-4 tracking-tight">
+        Abrigos
+      </h1>
+      <p class="text-lg text-[#94A3B8] max-w-2xl mx-auto">
+        Visualize abrigos disponíveis, capacidade e necessidades atuais em tempo real.
+      </p>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="py-16 bg-[#0A0F1C]">
+    <div class="max-w-6xl mx-auto px-6 md:px-8">
+      <!-- Info Card -->
+      <div class="omnivis-card mb-8 hover:border-[#10B981]/30">
+        <div class="omnivis-card__icon bg-[#10B981]/15">
+          <Icons.Info class="w-6 h-6 text-[#10B981]" />
+        </div>
+        <h2 class="omnivis-card__title">Abrigos Disponíveis</h2>
+        <p class="omnivis-card__text">
+          Visualize abrigos disponíveis e necessidades atuais. Sistema em integração com backend.
+        </p>
+      </div>
+
+      <!-- Lista Placeholder -->
+      <div class="omnivis-card mb-8">
+        <div class="omnivis-card__icon bg-[#06B6D4]/15">
+          <Icons.Menu class="w-6 h-6 text-[#06B6D4]" />
+        </div>
+        <h3 class="omnivis-card__title">Lista de Abrigos</h3>
+        <p class="omnivis-card__text">
+          Nenhum abrigo cadastrado no momento. Funcionalidade em desenvolvimento.
+        </p>
+      </div>
+
+      <!-- Voltar -->
+      <div class="flex justify-center">
+        <a 
+          href="/" 
+          class="inline-flex items-center justify-center text-center min-h-[44px] px-4 py-2 bg-transparent border border-[#06B6D4] text-[#06B6D4] rounded-lg font-semibold hover:bg-[#06B6D4]/10 transition-all cursor-pointer text-sm"
+        >
+          ← Voltar para Home
+        </a>
+      </div>
+    </div>
+  </section>
 </Layout>

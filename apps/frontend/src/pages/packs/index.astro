@@ -1,12 +1,55 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PacksManager from '../../components/packs/PacksManager';
+import { Icons } from '../../components/icons/OmnivisIcons';
 ---
 
 <Layout title="Gestão de Packs - OMNIVIS">
-  <main class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold mb-6">Gestão de Packs</h1>
-    <PacksManager client:load />
-    <a href="/" class="text-orange-600 hover:text-orange-800 mt-4 inline-block">Voltar para Home</a>
-  </main>
+  <!-- Hero Section -->
+  <section class="relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-30">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(245,158,11,0.2),transparent_50%)]" />
+    </div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-6 md:px-8 text-center">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F59E0B]/10 border border-[#F59E0B]/20 mb-6">
+        <Icons.Shield class="w-4 h-4 text-[#F59E0B]" />
+        <span class="text-sm font-medium text-[#F59E0B]">Gestão de Packs</span>
+      </div>
+
+      <h1 class="text-4xl md:text-5xl font-bold text-[#F8FAFC] mb-4 tracking-tight">
+        Gestão de Packs
+      </h1>
+      <p class="text-lg text-[#94A3B8] max-w-2xl mx-auto">
+        Formação automática de equipes de ação. Organize voluntários em packs eficientes.
+      </p>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="py-16 bg-[#0A0F1C]">
+    <div class="max-w-6xl mx-auto px-6 md:px-8">
+      <div class="omnivis-card mb-8">
+        <div class="omnivis-card__icon bg-[#F59E0B]/15">
+          <Icons.UsersGroup class="w-6 h-6 text-[#F59E0B]" />
+        </div>
+        <h2 class="omnivis-card__title">Gerenciador de Packs</h2>
+        <p class="omnivis-card__text mb-6">
+          Sistema de formação automática de equipes baseado em competências e disponibilidade.
+        </p>
+        <PacksManager client:load />
+      </div>
+
+      <div class="flex justify-center">
+        <a 
+          href="/" 
+          class="inline-flex items-center justify-center text-center min-h-[44px] px-4 py-2 bg-transparent border border-[#06B6D4] text-[#06B6D4] rounded-lg font-semibold hover:bg-[#06B6D4]/10 transition-all cursor-pointer text-sm"
+        >
+          ← Voltar para Home
+        </a>
+      </div>
+    </div>
+  </section>
 </Layout>

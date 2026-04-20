@@ -1,0 +1,8 @@
+/**
+ * OMNIVIS Design System - Tailwind CSS Entry Point
+ * Diretivas do Tailwind CSS para processar as classes utilitárias
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

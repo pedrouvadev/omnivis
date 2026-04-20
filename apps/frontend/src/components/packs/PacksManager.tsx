@@ -73,7 +73,7 @@ const PacksManager: React.FC = () => {
     return (
       <div className="space-y-4">
         {[1, 2, 3].map((i) => (
-          <div key={i} className="bg-gray-100 rounded-lg p-4 h-24 animate-pulse" />
+          <div key={i} className="bg-[rgba(15,23,42,0.6)] backdrop-blur-[12px] border border-white/10 rounded-xl p-4 h-24 animate-pulse" />
         ))}
       </div>
     );
@@ -82,29 +82,35 @@ const PacksManager: React.FC = () => {
   return (
     <div className="space-y-6">
       {error && (
-        <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700">
-          {error}
+        <div className="omnivis-card border-[#EF4444]/30">
+          <div className="omnivis-card__icon bg-[#EF4444]/15">
+            <span className="text-2xl text-[#EF4444]">!</span>
+          </div>
+          <p className="text-[#EF4444] text-sm">{error}</p>
         </div>
       )}
 
       {/* Gerar Novo Pack */}
-      <div className="bg-white border rounded-lg p-4">
-        <h2 className="font-bold mb-4">Gerar Novo Pack</h2>
-        <div className="flex gap-2">
+      <div className="omnivis-card">
+        <div className="omnivis-card__icon bg-[#F59E0B]/15">
+          <span className="text-xl text-[#F59E0B]">⚡</span>
+        </div>
+        <h2 className="omnivis-card__title">Gerar Novo Pack</h2>
+        <div className="flex gap-2 mt-4">
           <select
             value={novoPackTipo}
             onChange={(e) => setNovoPackTipo(e.target.value)}
-            className="flex-1 px-4 py-3 border rounded-lg min-h-[48px]"
+            className="flex-1 px-4 py-3 bg-white/5 border border-white/10 rounded-lg min-h-[48px] text-[#F8FAFC] focus:outline-none focus:border-[#F59E0B] focus:ring-1 focus:ring-[#F59E0B]"
           >
-            <option value="">Selecione o tipo...</option>
-            <option value="Limpeza">Limpeza</option>
-            <option value="Reconstrucao">Reconstrução</option>
-            <option value="Logistica">Logística</option>
+            <option value="" className="bg-[#0F172A]">Selecione o tipo...</option>
+            <option value="Limpeza" className="bg-[#0F172A]">Limpeza</option>
+            <option value="Reconstrucao" className="bg-[#0F172A]">Reconstrução</option>
+            <option value="Logistica" className="bg-[#0F172A]">Logística</option>
           </select>
           <button
             onClick={handleGerarPack}
             disabled={!novoPackTipo}
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg min-h-[48px] disabled:bg-gray-300"
+            className="inline-flex items-center justify-center text-center min-h-[48px] px-6 py-3 bg-gradient-to-r from-[#F59E0B] to-[#D97706] text-white rounded-lg font-semibold hover:opacity-90 transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed text-sm"
           >
             Gerar
           </button>
@@ -112,40 +118,48 @@ const PacksManager: React.FC = () => {
       </div>
 
       {/* Lista de Packs */}
-      <div className="bg-white border rounded-lg">
-        <div className="p-4 border-b">
-          <h2 className="font-bold">Packs Disponíveis ({packs.filter(p => p.disponivel).length})</h2>
+      <div className="omnivis-card">
+        <div className="flex items-center justify-between mb-4 pb-4 border-b border-white/10">
+          <h2 className="text-lg font-bold text-[#F8FAFC]">
+            Packs Disponíveis ({packs.filter(p => p.disponivel).length})
+          </h2>
         </div>
-        <div className="divide-y">
-          {packs.map((pack) => (
-            <div
-              key={pack.id}
-              className={`p-4 flex items-center justify-between min-h-[64px] ${
-                !pack.disponivel ? 'bg-gray-50' : ''
-              }`}
-            >
-              <div>
-                <h3 className="font-bold">{pack.nome}</h3>
-                <p className="text-sm text-gray-600">Tipo: {pack.tipo}</p>
-                <p className="text-sm text-gray-600">Membros: {pack.membros.length}</p>
-                <span
-                  className={`inline-block px-2 py-1 rounded text-xs mt-2 ${
-                    pack.disponivel ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
-                  }`}
-                >
-                  {pack.disponivel ? 'Disponível' : 'Em Missão'}
-                </span>
+        <div className="space-y-3">
+          {packs.length === 0 ? (
+            <p className="text-[#94A3B8] text-center py-8">Nenhum pack encontrado.</p>
+          ) : (
+            packs.map((pack) => (
+              <div
+                key={pack.id}
+                className={`p-4 bg-white/5 border rounded-lg flex items-center justify-between min-h-[64px] transition-all ${
+                  pack.disponivel ? 'border-white/10 hover:border-[#F59E0B]/30' : 'border-white/5 opacity-60'
+                }`}
+              >
+                <div>
+                  <h3 className="font-bold text-[#F8FAFC]">{pack.nome}</h3>
+                  <p className="text-sm text-[#94A3B8]">Tipo: {pack.tipo}</p>
+                  <p className="text-sm text-[#64748B]">Membros: {pack.membros.length}</p>
+                  <span
+                    className={`inline-block px-2 py-1 rounded text-xs mt-2 font-medium ${
+                      pack.disponivel 
+                        ? 'bg-[#10B981]/10 text-[#10B981]' 
+                        : 'bg-[#EF4444]/10 text-[#EF4444]'
+                    }`}
+                  >
+                    {pack.disponivel ? 'Disponível' : 'Em Missão'}
+                  </span>
+                </div>
+                {pack.disponivel && (
+                  <button
+                    onClick={() => handleConvocar(pack.id)}
+                    className="inline-flex items-center justify-center text-center min-h-[44px] px-4 py-2 bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] text-white rounded-lg font-semibold hover:opacity-90 transition-all cursor-pointer text-sm"
+                  >
+                    Convocar
+                  </button>
+                )}
               </div>
-              {pack.disponivel && (
-                <button
-                  onClick={() => handleConvocar(pack.id)}
-                  className="px-4 py-2 bg-purple-600 text-white rounded-lg min-h-[48px]"
-                >
-                  Convocar
-                </button>
-              )}
-            </div>
-          ))}
+            ))
+          )}
         </div>
       </div>
     </div>

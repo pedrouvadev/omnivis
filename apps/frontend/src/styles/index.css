@@ -1,0 +1,260 @@
+/**
+ * OMNIVIS Design System - Main Stylesheet
+ * Importa todos os Design Tokens e estilos globais
+ */
+
+/* === Imports (devem vir antes de qualquer outra declaração) === */
+@import './tailwind.css';
+@import './theme-config.css';
+@import './design-tokens.css';
+@import './typography.css';
+@import './colors.css';
+@import './animations.css';
+
+/* === Reset e Base === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* === Focus Styles para Acessibilidade === */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* === Links === */
+a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  transition: color var(--transition-base) ease;
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* === Headings === */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+  color: var(--color-text-primary);
+  margin-top: 0;
+  margin-bottom: var(--space-3);
+}
+
+/* === Code === */
+code, pre {
+  font-family: var(--font-code);
+}
+
+/* === Selection === */
+::selection {
+  background-color: var(--color-primary-200);
+  color: var(--color-text-primary);
+}
+
+/* === Scrollbar Customization === */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-400);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neutral-500);
+}
+
+/* === Utility Classes === */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.not-sr-only {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* === OMNIVIS Card Component === */
+.omnivis-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.omnivis-card:hover {
+  border-color: rgba(6, 182, 212, 0.3);
+}
+
+.omnivis-card__icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.omnivis-card__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #F8FAFC;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.omnivis-card__text {
+  font-size: 0.875rem;
+  color: #94A3B8;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.omnivis-card__badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+/* === OMNIVIS Step Card (Como Funciona) === */
+.omnivis-step {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.omnivis-step:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.omnivis-step__number {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  border: 2px solid currentColor;
+}
+
+.omnivis-step__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.25rem;
+}
+
+.omnivis-step__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #F8FAFC;
+  margin-bottom: 0.75rem;
+}
+
+.omnivis-step__desc {
+  font-size: 0.875rem;
+  color: #94A3B8;
+  line-height: 1.6;
+}
+
+/* === Connector Line for Steps === */
+.omnivis-connector {
+  position: relative;
+}
+
+.omnivis-connector::before {
+  content: '';
+  position: absolute;
+  top: 1.75rem;
+  left: 16.67%;
+  right: 16.67%;
+  height: 2px;
+  background: linear-gradient(to right, #06B6D4, #10B981, #F97316);
+  z-index: 0;
+}
+
+@media (max-width: 767px) {
+  .omnivis-connector::before {
+    display: none;
+  }
+  
+  .omnivis-step {
+    padding: 1.25rem;
+  }
+  
+  .omnivis-card {
+    padding: 1.25rem;
+  }
+}
+
+/* === Print Styles === */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}

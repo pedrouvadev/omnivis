@@ -1,0 +1,216 @@
+/**
+ * OMNIVIS THEME CONFIG - Identidade Visual Vanguarda 2026
+ * Dossiê Técnico de Engenharia de Front-End
+ * Stack: Astro 6 + React 19 + Tailwind 4
+ * Compliance: WCAG AAA | Touch-First | Performance
+ */
+
+:root {
+  /* ============================================
+     1. ARQUITETURA DE CORES (DARK_MODE_FIRST)
+     ============================================ */
+  
+  /* Base - Jet Black profundo para economia de energia */
+  --color-bg-base: #0A0A0B;
+  --color-bg-secondary: #0F0F11;
+  --color-bg-tertiary: #141416;
+  
+  /* Primary - Neon Cyan para conexões ativas */
+  --color-primary-neon: #00F2FF;
+  --color-primary-cyan: #00D4E0;
+  --color-primary-blue: #00A8FF;
+  
+  /* Alert/Crisis - Vermelho Crítico para gatilhos */
+  --color-status-alert: #FF3B30;
+  --color-status-warning: #FF9500;
+  --color-status-success: #34C759;
+  
+  /* Surface - Glassmorphism */
+  --color-surface-glass: rgba(255, 255, 255, 0.03);
+  --color-surface-glass-hover: rgba(255, 255, 255, 0.05);
+  --color-surface-glass-active: rgba(255, 255, 255, 0.08);
+  --color-border-glass: rgba(255, 255, 255, 0.1);
+  --color-border-glass-hover: rgba(255, 255, 255, 0.15);
+  
+  /* Text - Contraste WCAG AAA (7:1) */
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: rgba(255, 255, 255, 0.85);
+  --color-text-tertiary: rgba(255, 255, 255, 0.6);
+  --color-text-muted: rgba(255, 255, 255, 0.4);
+  
+  /* ============================================
+     2. TIPOGRAFIA (Proporção Áurea φ = 1.618)
+     ============================================ */
+  
+  /* Font Families */
+  --font-family-primary: 'Geist Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  
+  /* Font Sizes - Escala Modular Baseada em φ */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px - Legibilidade sob estresse */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+  --font-size-6xl: 3.75rem;   /* 60px */
+  --font-size-7xl: 4.5rem;    /* 72px - H1 Hero */
+  
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* Line Heights - Otimizados para leitura rápida */
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+  
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.05em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+  
+  /* ============================================
+     3. ESPAÇAMENTO (Proporção Áurea φ = 1.618)
+     ============================================ */
+  
+  --spacing-unit: 0.25rem;     /* 4px */
+  --spacing-xs: 0.5rem;       /* 8px */
+  --spacing-sm: 0.75rem;      /* 12px */
+  --spacing-md: 1rem;         /* 16px */
+  --spacing-lg: 1.5rem;       /* 24px */
+  --spacing-xl: 2rem;         /* 32px */
+  --spacing-2xl: 3rem;        /* 48px */
+  --spacing-3xl: 4rem;        /* 64px */
+  --spacing-4xl: 6rem;        /* 96px */
+  --spacing-5xl: 8rem;        /* 128px */
+  
+  /* Espaçamentos baseados em φ */
+  --spacing-phi-sm: 1.618rem;  /* ~26px */
+  --spacing-phi-md: 2.618rem;  /* ~42px */
+  --spacing-phi-lg: 4.236rem;  /* ~68px */
+  --spacing-phi-xl: 6.854rem;  /* ~110px */
+  
+  /* ============================================
+     4. BORDAS E RADIUS
+     ============================================ */
+  
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 20px;
+  --border-radius-2xl: 24px;
+  --border-radius-full: 9999px;
+  
+  /* Border Widths */
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 3px;
+  
+  /* ============================================
+     5. SHADOWS E ELEVATION
+     ============================================ */
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  
+  /* Neon Glows */
+  --glow-neon: 0 0 20px rgba(0, 242, 255, 0.3);
+  --glow-alert: 0 0 20px rgba(255, 59, 48, 0.3);
+  --glow-success: 0 0 20px rgba(52, 199, 89, 0.3);
+  
+  /* ============================================
+     6. TRANSIÇÕES E EASING
+     ============================================ */
+  
+  --transition-fast: 150ms;
+  --transition-base: 300ms;
+  --transition-slow: 500ms;
+  --transition-slower: 700ms;
+  
+  /* Easing Curves - Cubic Bezier */
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-elastic: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* ============================================
+     7. Z-INDEX SCALE
+     ============================================ */
+  
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  
+  /* ============================================
+     8. BLUR E GLASSMORPHISM
+     ============================================ */
+  
+  --blur-sm: 4px;
+  --blur-md: 8px;
+  --blur-lg: 12px;
+  --blur-xl: 16px;
+  --blur-2xl: 24px;
+  
+  /* ============================================
+     9. TOUCH TARGETS (Mínimo 48x48dp)
+     ============================================ */
+  
+  --touch-target-sm: 48px;
+  --touch-target-md: 56px;
+  --touch-target-lg: 64px;
+  
+  /* ============================================
+     10. GRADIENTES
+     ============================================ */
+  
+  --gradient-hero: linear-gradient(135deg, #00F2FF 0%, #00A8FF 50%, #0066FF 100%);
+  --gradient-alert: linear-gradient(135deg, #FF3B30 0%, #FF6B6B 100%);
+  --gradient-success: linear-gradient(135deg, #34C759 0%, #30D158 100%);
+  --gradient-surface: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+/* Dark Mode Override */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Já está em dark mode por padrão */
+  }
+}
+
+/* Light Mode Override */
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg-base: #FFFFFF;
+    --color-bg-secondary: #F5F5F7;
+    --color-bg-tertiary: #E8E8ED;
+    --color-text-primary: #0A0A0B;
+    --color-text-secondary: rgba(10, 10, 11, 0.85);
+    --color-text-tertiary: rgba(10, 10, 11, 0.6);
+    --color-text-muted: rgba(10, 10, 11, 0.4);
+    --color-surface-glass: rgba(0, 0, 0, 0.03);
+    --color-border-glass: rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.0.13] - 2026-04-19
+
+### Added
+- Documentação OpenAPI/Swagger completa da API (swagger.json)
+- Documentação técnica interna (docs/arquitetura.md)
+- Documentação de padrões de código (docs/padroes.md)
+- Relatório de validação do desenvolvimento (Documentação/_PLANO_DEV/RELATORIO_VALIDACAO_DESENVOLVIMENTO.md)
+
+### Fixed
+- Backend reiniciado e rotas de disponibilidades verificadas (não há erro, rotas funcionando corretamente)
+- Integração frontend-backend testada e funcionando
+- Criação de dados via API validada
+
+### Changed
+- PROJECT_STATUS.md atualizado com tarefas completadas por especialistas
+- Estado atualizado para "EM FINALIZAÇÃO - v1.0.13"
+
+## [1.0.12] - 2026-04-19
+
+### Added
+- Adicionado botão "Voltar para Home" na Torre de Controle
+- Adicionado botão "Voltar para Home" na Gestão de Packs
+
 ## [1.0.11] - 2026-04-19
 
 ### Fixed

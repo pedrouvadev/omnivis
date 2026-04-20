@@ -1,0 +1,923 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "OMNIVIS API",
+    "description": "API para orquestração logística de solidariedade em desastres naturais",
+    "version": "1.0.0",
+    "contact": {
+      "name": "OMNIVIS Team"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Servidor de desenvolvimento"
+    },
+    {
+      "url": "https://omnivis-backend.railway.app",
+      "description": "Servidor de produção"
+    }
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health check",
+        "description": "Verifica se a API está funcionando",
+        "responses": {
+          "200": {
+            "description": "API funcionando",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "example": "ok"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "OMNIVIS Backend API"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/voluntarios": {
+      "get": {
+        "summary": "Listar todos os voluntários",
+        "description": "Retorna uma lista de todos os voluntários cadastrados",
+        "responses": {
+          "200": {
+            "description": "Lista de voluntários",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Voluntario"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro ao buscar voluntários"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar novo voluntário",
+        "description": "Cadastra um novo voluntário no sistema",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VoluntarioCreate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Voluntário criado com sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Voluntario"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro ao criar voluntário"
+          }
+        }
+      }
+    },
+    "/api/v1/voluntarios/{id}": {
+      "get": {
+        "summary": "Buscar voluntário por ID",
+        "description": "Retorna os detalhes de um voluntário específico",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Voluntário encontrado",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Voluntario"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Voluntário não encontrado"
+          },
+          "500": {
+            "description": "Erro ao buscar voluntário"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualizar voluntário",
+        "description": "Atualiza os dados de um voluntário existente",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VoluntarioUpdate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Voluntário atualizado",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Voluntario"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro ao atualizar voluntário"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletar voluntário",
+        "description": "Remove um voluntário do sistema",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Voluntário deletado"
+          },
+          "500": {
+            "description": "Erro ao deletar voluntário"
+          }
+        }
+      }
+    },
+    "/api/v1/disponibilidades": {
+      "get": {
+        "summary": "Listar todas as disponibilidades",
+        "description": "Retorna uma lista de todas as disponibilidades cadastradas",
+        "responses": {
+          "200": {
+            "description": "Lista de disponibilidades",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Disponibilidade"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro ao buscar disponibilidades"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar nova disponibilidade",
+        "description": "Cadastra uma nova disponibilidade para um voluntário",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisponibilidadeCreate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Disponibilidade criada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Disponibilidade"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro ao criar disponibilidade"
+          }
+        }
+      }
+    },
+    "/api/v1/disponibilidades/{id}": {
+      "get": {
+        "summary": "Buscar disponibilidade por ID",
+        "description": "Retorna os detalhes de uma disponibilidade específica",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Disponibilidade encontrada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Disponibilidade"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Disponibilidade não encontrada"
+          },
+          "500": {
+            "description": "Erro ao buscar disponibilidade"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualizar disponibilidade",
+        "description": "Atualiza os dados de uma disponibilidade existente",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisponibilidadeUpdate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Disponibilidade atualizada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Disponibilidade"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro ao atualizar disponibilidade"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletar disponibilidade",
+        "description": "Remove uma disponibilidade do sistema",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Disponibilidade deletada"
+          },
+          "500": {
+            "description": "Erro ao deletar disponibilidade"
+          }
+        }
+      }
+    },
+    "/api/v1/abrigos": {
+      "get": {
+        "summary": "Listar todos os abrigos",
+        "description": "Retorna uma lista de todos os abrigos cadastrados",
+        "responses": {
+          "200": {
+            "description": "Lista de abrigos",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Abrigo"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro ao buscar abrigos"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar novo abrigo",
+        "description": "Cadastra um novo abrigo no sistema",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AbrigoCreate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Abrigo criado",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Abrigo"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro ao criar abrigo"
+          }
+        }
+      }
+    },
+    "/api/v1/abrigos/{id}": {
+      "get": {
+        "summary": "Buscar abrigo por ID",
+        "description": "Retorna os detalhes de um abrigo específico",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Abrigo encontrado",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Abrigo"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Abrigo não encontrado"
+          },
+          "500": {
+            "description": "Erro ao buscar abrigo"
+          }
+        }
+      }
+    },
+    "/api/v1/doacoes": {
+      "get": {
+        "summary": "Listar todas as doações",
+        "description": "Retorna uma lista de todas as doações cadastradas",
+        "responses": {
+          "200": {
+            "description": "Lista de doações",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Doacao"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro ao buscar doações"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar nova doação",
+        "description": "Cadastra uma nova doação no sistema",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DoacaoCreate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Doação criada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Doacao"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro ao criar doação"
+          }
+        }
+      }
+    },
+    "/api/v1/packs": {
+      "get": {
+        "summary": "Listar todos os packs",
+        "description": "Retorna uma lista de todos os packs cadastrados",
+        "responses": {
+          "200": {
+            "description": "Lista de packs",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Pack"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro ao buscar packs"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar novo pack",
+        "description": "Cadastra um novo pack no sistema",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PackCreate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Pack criado",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pack"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro ao criar pack"
+          }
+        }
+      }
+    },
+    "/api/v1/auth/register": {
+      "post": {
+        "summary": "Registrar novo usuário",
+        "description": "Registra um novo usuário no sistema",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthRegister"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Usuário registrado",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "token": {
+                      "type": "string"
+                    },
+                    "user": {
+                      "$ref": "#/components/schemas/Voluntario"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro ao registrar usuário"
+          }
+        }
+      }
+    },
+    "/api/v1/auth/login": {
+      "post": {
+        "summary": "Login de usuário",
+        "description": "Autentica um usuário no sistema",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthLogin"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Login realizado com sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "token": {
+                      "type": "string"
+                    },
+                    "user": {
+                      "$ref": "#/components/schemas/Voluntario"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Credenciais inválidas"
+          },
+          "500": {
+            "description": "Erro ao realizar login"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Voluntario": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "nome": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "telefone": {
+            "type": "string"
+          },
+          "localizacao": {
+            "type": "string",
+            "description": "Coordenadas geográficas no formato 'lat,lng'",
+            "example": "-23.5505,-46.6333"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "disponibilidades": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Disponibilidade"
+            }
+          }
+        }
+      },
+      "VoluntarioCreate": {
+        "type": "object",
+        "required": ["nome", "email", "telefone", "localizacao"],
+        "properties": {
+          "nome": {
+            "type": "string",
+            "minLength": 3
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "telefone": {
+            "type": "string",
+            "minLength": 10
+          },
+          "localizacao": {
+            "type": "string",
+            "pattern": "^-?\\d+\\.\\d+,-?\\d+\\.\\d+$"
+          }
+        }
+      },
+      "VoluntarioUpdate": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "minLength": 3
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "telefone": {
+            "type": "string",
+            "minLength": 10
+          },
+          "localizacao": {
+            "type": "string",
+            "pattern": "^-?\\d+\\.\\d+,-?\\d+\\.\\d+$"
+          }
+        }
+      },
+      "Disponibilidade": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "tipo": {
+            "type": "string",
+            "enum": ["Saude", "Logistica", "Engenharia"]
+          },
+          "ativo": {
+            "type": "string",
+            "description": "Ativo ou recurso disponível (Barco, Caminhao, Drone, CNH-D, etc.)"
+          },
+          "voluntarioId": {
+            "type": "string"
+          },
+          "voluntario": {
+            "$ref": "#/components/schemas/Voluntario"
+          }
+        }
+      },
+      "DisponibilidadeCreate": {
+        "type": "object",
+        "required": ["tipo", "ativo", "voluntarioId"],
+        "properties": {
+          "tipo": {
+            "type": "string",
+            "enum": ["Saude", "Logistica", "Engenharia"]
+          },
+          "ativo": {
+            "type": "string"
+          },
+          "voluntarioId": {
+            "type": "string"
+          }
+        }
+      },
+      "DisponibilidadeUpdate": {
+        "type": "object",
+        "properties": {
+          "tipo": {
+            "type": "string",
+            "enum": ["Saude", "Logistica", "Engenharia"]
+          },
+          "ativo": {
+            "type": "string"
+          }
+        }
+      },
+      "Abrigo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "nome": {
+            "type": "string"
+          },
+          "localizacao": {
+            "type": "string"
+          },
+          "capacidade": {
+            "type": "integer"
+          },
+          "ocupacao": {
+            "type": "integer"
+          },
+          "necessidades": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "AbrigoCreate": {
+        "type": "object",
+        "required": ["nome", "localizacao", "capacidade", "ocupacao"],
+        "properties": {
+          "nome": {
+            "type": "string"
+          },
+          "localizacao": {
+            "type": "string"
+          },
+          "capacidade": {
+            "type": "integer"
+          },
+          "ocupacao": {
+            "type": "integer"
+          },
+          "necessidades": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Doacao": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "doadorId": {
+            "type": "string"
+          },
+          "tipo": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["Pendente", "Coletada", "Entregue"]
+          },
+          "transporteId": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "DoacaoCreate": {
+        "type": "object",
+        "required": ["doadorId", "tipo"],
+        "properties": {
+          "doadorId": {
+            "type": "string"
+          },
+          "tipo": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["Pendente", "Coletada", "Entregue"],
+            "default": "Pendente"
+          }
+        }
+      },
+      "Pack": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "nome": {
+            "type": "string"
+          },
+          "tipo": {
+            "type": "string",
+            "enum": ["Reconstrucao", "Limpeza", "Logistica"]
+          },
+          "membros": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "IDs dos voluntários"
+          },
+          "disponivel": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      },
+      "PackCreate": {
+        "type": "object",
+        "required": ["nome", "tipo", "membros"],
+        "properties": {
+          "nome": {
+            "type": "string"
+          },
+          "tipo": {
+            "type": "string",
+            "enum": ["Reconstrucao", "Limpeza", "Logistica"]
+          },
+          "membros": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "disponivel": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      },
+      "AuthRegister": {
+        "type": "object",
+        "required": ["email", "password", "nome"],
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "password": {
+            "type": "string",
+            "minLength": 8
+          },
+          "nome": {
+            "type": "string"
+          }
+        }
+      },
+      "AuthLogin": {
+        "type": "object",
+        "required": ["email", "password"],
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

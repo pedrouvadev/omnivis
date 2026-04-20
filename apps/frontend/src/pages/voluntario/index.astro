@@ -1,17 +1,95 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { Icons } from '../../components/icons/OmnivisIcons';
 ---
 
 <Layout title="Área do Voluntário - OMNIVIS">
-  <main class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold mb-6">Área do Voluntário</h1>
-    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-      <h2 class="text-xl font-bold text-blue-800 mb-2">Bem-vindo!</h2>
-      <p class="text-blue-700 mb-4">Cadastre-se para oferecer sua ajuda em situações de desastre.</p>
-      <a href="/voluntario/cadastro" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors min-h-[48px]">
-        Cadastrar como Voluntário
-      </a>
+  <!-- Hero Section -->
+  <section class="relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-30">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.2),transparent_50%)]" />
     </div>
-    <a href="/" class="text-blue-600 hover:text-blue-800">Voltar para Home</a>
-  </main>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-6 md:px-8 text-center">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#06B6D4]/10 border border-[#06B6D4]/20 mb-6">
+        <Icons.Users class="w-4 h-4 text-[#06B6D4]" />
+        <span class="text-sm font-medium text-[#06B6D4]">Área do Voluntário</span>
+      </div>
+
+      <h1 class="text-4xl md:text-5xl font-bold text-[#F8FAFC] mb-4 tracking-tight">
+        Área do Voluntário
+      </h1>
+      <p class="text-lg text-[#94A3B8] max-w-2xl mx-auto">
+        Cadastre-se para oferecer sua ajuda em situações de desastre. Sua solidariedade faz a diferença.
+      </p>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="py-16 bg-[#0A0F1C]">
+    <div class="max-w-6xl mx-auto px-6 md:px-8">
+      <!-- Welcome Card -->
+      <div class="omnivis-card mb-8 hover:border-[#06B6D4]/30">
+        <div class="omnivis-card__icon bg-[#06B6D4]/15">
+          <Icons.UserPlus class="w-6 h-6 text-[#06B6D4]" />
+        </div>
+        <h2 class="omnivis-card__title">Bem-vindo!</h2>
+        <p class="omnivis-card__text mb-6">
+          Cadastre-se para oferecer sua ajuda em situações de desastre. Junte-se a milhares de voluntários.
+        </p>
+        <a 
+          href="/voluntario/cadastro" 
+          class="inline-flex items-center justify-center text-center min-h-[44px] px-6 py-2 bg-gradient-to-r from-[#F97316] to-[#EF4444] text-white rounded-lg font-semibold hover:opacity-90 transition-all cursor-pointer text-sm"
+        >
+          Cadastrar como Voluntário →
+        </a>
+      </div>
+
+      <!-- Actions -->
+      <div class="grid md:grid-cols-2 gap-5 mb-8">
+        <div class="omnivis-card">
+          <div class="omnivis-card__icon bg-[#10B981]/15">
+            <Icons.Heart class="w-6 h-6 text-[#10B981]" />
+          </div>
+          <h3 class="omnivis-card__title">Já é Voluntário?</h3>
+          <p class="omnivis-card__text mb-4">
+            Acesse seu perfil e atualize suas informações de disponibilidade.
+          </p>
+          <button 
+            disabled
+            class="inline-flex items-center justify-center text-center min-h-[44px] w-full px-4 py-2 bg-transparent border border-[#06B6D4]/50 text-[#06B6D4]/50 rounded-lg font-semibold cursor-not-allowed text-sm"
+          >
+            Acessar Perfil (Em Breve)
+          </button>
+        </div>
+
+        <div class="omnivis-card">
+          <div class="omnivis-card__icon bg-[#F59E0B]/15">
+            <Icons.Info class="w-6 h-6 text-[#F59E0B]" />
+          </div>
+          <h3 class="omnivis-card__title">Como Funciona</h3>
+          <p class="omnivis-card__text mb-4">
+            Entenda o processo de cadastro e como você será convocado.
+          </p>
+          <a 
+            href="/#como-funciona" 
+            class="inline-flex items-center justify-center text-center min-h-[44px] w-full px-4 py-2 bg-transparent border border-[#06B6D4] text-[#06B6D4] rounded-lg font-semibold hover:bg-[#06B6D4]/10 transition-all cursor-pointer text-sm"
+          >
+            Saiba Mais
+          </a>
+        </div>
+      </div>
+
+      <div class="flex justify-center">
+        <a 
+          href="/" 
+          class="inline-flex items-center justify-center text-center min-h-[44px] px-4 py-2 bg-transparent border border-[#06B6D4] text-[#06B6D4] rounded-lg font-semibold hover:bg-[#06B6D4]/10 transition-all cursor-pointer text-sm"
+        >
+          ← Voltar para Home
+        </a>
+      </div>
+    </div>
+  </section>
 </Layout>

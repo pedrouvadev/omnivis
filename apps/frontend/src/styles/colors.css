@@ -1,0 +1,318 @@
+/**
+ * OMNIVIS Design Tokens - Arquitetura de Cores e Dark Mode
+ * Sistema semântico com elevação de superfícies e efeitos especiais
+ * WCAG AAA Compliant
+ */
+
+:root {
+  /* === Primary Palette (Trust & Authority) === */
+  /* Blue - Confiança institucional, estabilidade */
+  --color-primary-50: #e0f2fe;
+  --color-primary-100: #bae6fd;
+  --color-primary-200: #7dd3fc;
+  --color-primary-300: #38bdf8;
+  --color-primary-400: #0ea5e9;
+  --color-primary-500: #0284c7;
+  --color-primary-600: #0369a1;
+  --color-primary-700: #075985;
+  --color-primary-800: #0c4a6e;
+  --color-primary-900: #082f49;
+  --color-primary-950: #020617;
+
+  /* === Secondary Palette (Hope & Action) === */
+  /* Emerald - Esperança, renovação, sucesso */
+  --color-secondary-50: #ecfdf5;
+  --color-secondary-100: #d1fae5;
+  --color-secondary-200: #a7f3d0;
+  --color-secondary-300: #6ee7b7;
+  --color-secondary-400: #34d399;
+  --color-secondary-500: #10b981;
+  --color-secondary-600: #059669;
+  --color-secondary-700: #047857;
+  --color-secondary-800: #065f46;
+  --color-secondary-900: #064e3b;
+  --color-secondary-950: #022c22;
+
+  /* === Accent Palette (Urgency & Alert) === */
+  /* Amber - Alerta, atenção, urgência */
+  --color-accent-50: #fffbeb;
+  --color-accent-100: #fef3c7;
+  --color-accent-200: #fde68a;
+  --color-accent-300: #fcd34d;
+  --color-accent-400: #fbbf24;
+  --color-accent-500: #f59e0b;
+  --color-accent-600: #d97706;
+  --color-accent-700: #b45309;
+  --color-accent-800: #92400e;
+  --color-accent-900: #78350f;
+  --color-accent-950: #451a03;
+
+  /* === Danger Palette (Critical & Emergency) === */
+  /* Red - Emergência, erro, parada */
+  --color-danger-50: #fef2f2;
+  --color-danger-100: #fee2e2;
+  --color-danger-200: #fecaca;
+  --color-danger-300: #fca5a5;
+  --color-danger-400: #f87171;
+  --color-danger-500: #ef4444;
+  --color-danger-600: #dc2626;
+  --color-danger-700: #b91c1c;
+  --color-danger-800: #991b1b;
+  --color-danger-900: #7f1d1d;
+  --color-danger-950: #450a0a;
+
+  /* === Neutral Palette (Structure & Content) === */
+  /* Slate - Estrutura, conteúdo, neutralidade */
+  --color-neutral-0: #ffffff;
+  --color-neutral-50: #f8fafc;
+  --color-neutral-100: #f1f5f9;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-300: #cbd5e1;
+  --color-neutral-400: #94a3b8;
+  --color-neutral-500: #64748b;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1e293b;
+  --color-neutral-900: #0f172a;
+  --color-neutral-950: #020617;
+
+  /* === Semantic Colors (Light Mode) === */
+  --color-bg-canvas: var(--color-neutral-50);
+  --color-bg-surface: var(--color-neutral-0);
+  --color-bg-surface-elevated: var(--color-neutral-0);
+  --color-bg-surface-overlay: rgba(255, 255, 255, 0.95);
+
+  --color-text-primary: var(--color-neutral-950);
+  --color-text-secondary: var(--color-neutral-700);
+  --color-text-tertiary: var(--color-neutral-500);
+  --color-text-disabled: var(--color-neutral-400);
+
+  --color-border-default: var(--color-neutral-200);
+  --color-border-strong: var(--color-neutral-300);
+  --color-border-subtle: var(--color-neutral-100);
+
+  --color-primary: var(--color-primary-600);
+  --color-primary-hover: var(--color-primary-700);
+  --color-primary-active: var(--color-primary-800);
+
+  --color-success: var(--color-secondary-600);
+  --color-warning: var(--color-accent-600);
+  --color-error: var(--color-danger-600);
+  --color-info: var(--color-primary-600);
+
+  /* === Surface Elevation (Shadows & Backdrop) === */
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+
+  /* Glassmorphism Effects */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-blur: 12px;
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+
+  /* Neon Glow Effects */
+  --neon-primary: 0 0 20px rgba(14, 165, 233, 0.5);
+  --neon-secondary: 0 0 20px rgba(16, 185, 129, 0.5);
+  --neon-accent: 0 0 20px rgba(245, 158, 11, 0.5);
+  --neon-danger: 0 0 20px rgba(239, 68, 68, 0.5);
+
+  /* === Gradients === */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-700) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--color-secondary-500) 0%, var(--color-secondary-700) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--color-accent-500) 0%, var(--color-accent-700) 100%);
+  --gradient-danger: linear-gradient(135deg, var(--color-danger-500) 0%, var(--color-danger-700) 100%);
+  --gradient-mesh: radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+                   radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+                   radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+}
+
+/* === Dark Mode === */
+:root[data-theme="dark"] {
+  /* === Semantic Colors (Dark Mode) === */
+  --color-bg-canvas: var(--color-neutral-950);
+  --color-bg-surface: var(--color-neutral-900);
+  --color-bg-surface-elevated: var(--color-neutral-800);
+  --color-bg-surface-overlay: rgba(15, 23, 42, 0.95);
+
+  --color-text-primary: var(--color-neutral-50);
+  --color-text-secondary: var(--color-neutral-300);
+  --color-text-tertiary: var(--color-neutral-400);
+  --color-text-disabled: var(--color-neutral-500);
+
+  --color-border-default: var(--color-neutral-700);
+  --color-border-strong: var(--color-neutral-600);
+  --color-border-subtle: var(--color-neutral-800);
+
+  --color-primary: var(--color-primary-400);
+  --color-primary-hover: var(--color-primary-300);
+  --color-primary-active: var(--color-primary-500);
+
+  --color-success: var(--color-secondary-400);
+  --color-warning: var(--color-accent-400);
+  --color-error: var(--color-danger-400);
+  --color-info: var(--color-primary-400);
+
+  /* === Surface Elevation (Dark Mode) === */
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.4), 0 1px 2px -1px rgb(0 0 0 / 0.4);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.5);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.7);
+  --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.3);
+
+  /* Glassmorphism Effects (Dark Mode) */
+  --glass-bg: rgba(15, 23, 42, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: 12px;
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+  /* Neon Glow Effects (Enhanced for Dark Mode) */
+  --neon-primary: 0 0 30px rgba(56, 189, 248, 0.6), 0 0 60px rgba(56, 189, 248, 0.3);
+  --neon-secondary: 0 0 30px rgba(52, 211, 153, 0.6), 0 0 60px rgba(52, 211, 153, 0.3);
+  --neon-accent: 0 0 30px rgba(251, 191, 36, 0.6), 0 0 60px rgba(251, 191, 36, 0.3);
+  --neon-danger: 0 0 30px rgba(248, 113, 113, 0.6), 0 0 60px rgba(248, 113, 113, 0.3);
+
+  /* === Gradients (Dark Mode) === */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary-400) 0%, var(--color-primary-600) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--color-secondary-400) 0%, var(--color-secondary-600) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--color-accent-400) 0%, var(--color-accent-600) 100%);
+  --gradient-danger: linear-gradient(135deg, var(--color-danger-400) 0%, var(--color-danger-600) 100%);
+  --gradient-mesh: radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+                   radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+                   radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+}
+
+/* === Utility Classes for Glassmorphism === */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+}
+
+:root[data-theme="dark"] .glass-strong {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* === Utility Classes for Neon Glow === */
+.neon-primary {
+  box-shadow: var(--neon-primary);
+}
+
+.neon-secondary {
+  box-shadow: var(--neon-secondary);
+}
+
+.neon-accent {
+  box-shadow: var(--neon-accent);
+}
+
+.neon-danger {
+  box-shadow: var(--neon-danger);
+}
+
+/* === Utility Classes for Gradients === */
+.gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.gradient-secondary {
+  background: var(--gradient-secondary);
+}
+
+.gradient-accent {
+  background: var(--gradient-accent);
+}
+
+.gradient-danger {
+  background: var(--gradient-danger);
+}
+
+.gradient-mesh {
+  background: var(--gradient-mesh);
+}
+
+/* === Surface Elevation Classes === */
+.surface-elevated {
+  background: var(--color-bg-surface-elevated);
+  box-shadow: var(--shadow-md);
+}
+
+.surface-card {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-default);
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-lg);
+  transition: box-shadow var(--transition-base) ease, transform var(--transition-base) ease;
+}
+
+.surface-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* === Dark Mode Toggle Transition === */
+* {
+  transition: background-color var(--transition-slow) ease,
+              border-color var(--transition-slow) ease,
+              color var(--transition-slow) ease,
+              box-shadow var(--transition-slow) ease;
+}
+
+/* === System Preference Detection === */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg-canvas: var(--color-neutral-950);
+    --color-bg-surface: var(--color-neutral-900);
+    --color-bg-surface-elevated: var(--color-neutral-800);
+    --color-bg-surface-overlay: rgba(15, 23, 42, 0.95);
+    --color-text-primary: var(--color-neutral-50);
+    --color-text-secondary: var(--color-neutral-300);
+    --color-text-tertiary: var(--color-neutral-400);
+    --color-text-disabled: var(--color-neutral-500);
+    --color-border-default: var(--color-neutral-700);
+    --color-border-strong: var(--color-neutral-600);
+    --color-border-subtle: var(--color-neutral-800);
+    --color-primary: var(--color-primary-400);
+    --color-primary-hover: var(--color-primary-300);
+    --color-primary-active: var(--color-primary-500);
+    --color-success: var(--color-secondary-400);
+    --color-warning: var(--color-accent-400);
+    --color-error: var(--color-danger-400);
+    --color-info: var(--color-primary-400);
+    --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.4), 0 1px 2px -1px rgb(0 0 0 / 0.4);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.5);
+    --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.7);
+    --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.3);
+    --glass-bg: rgba(15, 23, 42, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --neon-primary: 0 0 30px rgba(56, 189, 248, 0.6), 0 0 60px rgba(56, 189, 248, 0.3);
+    --neon-secondary: 0 0 30px rgba(52, 211, 153, 0.6), 0 0 60px rgba(52, 211, 153, 0.3);
+    --neon-accent: 0 0 30px rgba(251, 191, 36, 0.6), 0 0 60px rgba(251, 191, 36, 0.3);
+    --neon-danger: 0 0 30px rgba(248, 113, 113, 0.6), 0 0 60px rgba(248, 113, 113, 0.3);
+    --gradient-primary: linear-gradient(135deg, var(--color-primary-400) 0%, var(--color-primary-600) 100%);
+    --gradient-secondary: linear-gradient(135deg, var(--color-secondary-400) 0%, var(--color-secondary-600) 100%);
+    --gradient-accent: linear-gradient(135deg, var(--color-accent-400) 0%, var(--color-accent-600) 100%);
+    --gradient-danger: linear-gradient(135deg, var(--color-danger-400) 0%, var(--color-danger-600) 100%);
+  }
+}

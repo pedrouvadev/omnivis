@@ -1,32 +1,346 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Hero3D from '../components/Hero3D';
+import { Icons } from '../components/icons/OmnivisIcons';
 ---
 
 <Layout title="OMNIVIS - Orquestrador Logístico de Solidariedade">
-  <main class="container mx-auto px-4 py-8">
-    <h1 class="text-4xl font-bold mb-4 text-center">OMNIVIS</h1>
-    <p class="text-lg mb-4 text-center">Orquestrador Logístico de Solidariedade</p>
-    <p class="text-gray-600 mb-8 text-center">
-      Sistema de gestão de capital humano e material para desastres naturais.
-    </p>
-    
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-      <a href="/voluntario" class="block p-6 bg-blue-50 border border-blue-200 rounded-lg hover:bg-blue-100 transition-colors min-h-[48px]">
-        <h2 class="text-xl font-bold text-blue-800 mb-2">Sou Voluntário</h2>
-        <p class="text-blue-700">Cadastre-se e ofereça sua ajuda em situações de desastre.</p>
-      </a>
-      <a href="/abrigos" class="block p-6 bg-green-50 border border-green-200 rounded-lg hover:bg-green-100 transition-colors min-h-[48px]">
-        <h2 class="text-xl font-bold text-green-800 mb-2">Abrigos</h2>
-        <p class="text-green-700">Visualize abrigos disponíveis e necessidades atuais.</p>
-      </a>
-      <a href="/torre" class="block p-6 bg-purple-50 border border-purple-200 rounded-lg hover:bg-purple-100 transition-colors min-h-[48px]">
-        <h2 class="text-xl font-bold text-purple-800 mb-2">Torre de Controle</h2>
-        <p class="text-purple-700">Dashboard administrativo para gestores de crise.</p>
-      </a>
-      <a href="/packs" class="block p-6 bg-orange-50 border border-orange-200 rounded-lg hover:bg-orange-100 transition-colors min-h-[48px]">
-        <h2 class="text-xl font-bold text-orange-800 mb-2">Gestão de Packs</h2>
-        <p class="text-orange-700">Gerencie e convoque equipes de voluntários.</p>
-      </a>
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <!-- Hero3D Background - client:visible para performance (LCP < 1s) -->
+    <div class="absolute inset-0 z-0 opacity-40">
+      <Hero3D client:visible />
     </div>
-  </main>
+
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-30 z-0">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.3),transparent_50%)]" />
+      <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 container mx-auto px-6 py-20 text-center">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-8">
+        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+        <span class="text-sm font-medium text-blue-300">Gestão de Crises Humanitárias</span>
+      </div>
+
+      <!-- Headline - Tipografia Vanguarda 2026 -->
+      <h1 class="text-[4.5rem] font-extrabold text-white mb-6 tracking-tight leading-none">
+        OMNIVIS
+        <span class="block text-3xl md:text-5xl lg:text-6xl font-normal text-[#00F2FF] mt-4 tracking-normal">
+          Orquestrador Logístico de Solidariedade
+        </span>
+      </h1>
+
+      <!-- Subheadline - Legibilidade sob estresse (line-height 1.6) -->
+      <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-12 leading-normal">
+        Transforme o caos da boa vontade em ação organizada. Sistema inteligente de gestão 
+        de capital humano e material para desastres naturais.
+      </p>
+
+      <!-- CTA Buttons - Touch Targets 48x48dp WCAG AAA -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <button 
+          onclick="window.location.href='/voluntario/cadastro'"
+          class="inline-flex items-center justify-center text-center min-h-[48px] px-8 py-3 bg-gradient-to-r from-[#F97316] to-[#EF4444] text-white rounded-lg font-semibold hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#F97316]/25 cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#F97316]"
+        >
+          Cadastrar Voluntário
+        </button>
+        <button 
+          onclick="document.getElementById('como-funciona').scrollIntoView({behavior: 'smooth'})"
+          class="inline-flex items-center justify-center text-center min-h-[48px] px-8 py-3 bg-transparent border-2 border-[#06B6D4] text-[#06B6D4] rounded-lg font-semibold hover:bg-[#06B6D4]/10 transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#06B6D4]"
+        >
+          Como Funciona
+        </button>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto mt-20 pt-12 border-t border-white/10">
+        <div>
+          <div class="text-3xl md:text-4xl font-bold text-white mb-1">10k+</div>
+          <div class="text-sm text-gray-400">Voluntários</div>
+        </div>
+        <div>
+          <div class="text-3xl md:text-4xl font-bold text-white mb-1">50+</div>
+          <div class="text-sm text-gray-400">Abrigos</div>
+        </div>
+        <div>
+          <div class="text-3xl md:text-4xl font-bold text-white mb-1">24/7</div>
+          <div class="text-sm text-gray-400">Monitoramento</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <Icons.ChevronDown class="w-6 h-6 text-white/50" />
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="como-funciona" class="py-24 bg-[#0F172A] relative overflow-hidden">
+    <!-- Glow accent -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#06B6D4]/10 rounded-full blur-[120px] pointer-events-none" />
+
+    <div class="relative z-10 max-w-6xl mx-auto px-6 md:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <span class="inline-block text-[#06B6D4] text-sm font-semibold tracking-widest uppercase mb-4">Fluxo de Ação</span>
+        <h2 class="text-3xl md:text-5xl font-bold text-[#F8FAFC] mb-4 tracking-tight">
+          Como Funciona
+        </h2>
+        <p class="text-[#94A3B8] text-lg max-w-xl mx-auto">
+          Três passos para transformar sua solidariedade em ação organizada
+        </p>
+      </div>
+
+      <!-- Steps usando mesmo estilo dos cards de referência -->
+      <div class="grid md:grid-cols-3 gap-5">
+        <!-- Step 1 -->
+        <div class="omnivis-card hover:border-[#06B6D4]/30">
+          <div class="omnivis-card__icon bg-[#06B6D4]/15">
+            <Icons.User class="w-6 h-6 text-[#06B6D4]" />
+          </div>
+          <div class="omnivis-card__badge text-[#06B6D4]">Passo 1</div>
+          <h3 class="omnivis-card__title">Cadastre-se</h3>
+          <p class="omnivis-card__text">
+            Crie seu perfil informando suas competências, disponibilidade e localização.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="omnivis-card hover:border-[#10B981]/30">
+          <div class="omnivis-card__icon bg-[#10B981]/15">
+            <Icons.MapPin class="w-6 h-6 text-[#10B981]" />
+          </div>
+          <div class="omnivis-card__badge text-[#10B981]">Passo 2</div>
+          <h3 class="omnivis-card__title">Seja Convocado</h3>
+          <p class="omnivis-card__text">
+            Receba notificações quando sua ajuda for necessária em sua região.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="omnivis-card hover:border-[#F97316]/30">
+          <div class="omnivis-card__icon bg-[#F97316]/15">
+            <Icons.Heart class="w-6 h-6 text-[#F97316]" />
+          </div>
+          <div class="omnivis-card__badge text-[#F97316]">Passo 3</div>
+          <h3 class="omnivis-card__title">Salve Vidas</h3>
+          <p class="omnivis-card__text">
+            Aja em coordenação com outros voluntários para maximizar o impacto.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section - Bento Grid -->
+  <section class="py-24 bg-[#0A0F1C] relative overflow-hidden">
+    <!-- Glow accents -->
+    <div class="absolute top-1/4 left-0 w-[400px] h-[400px] bg-[#06B6D4]/5 rounded-full blur-[100px] pointer-events-none" />
+    <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#F97316]/5 rounded-full blur-[120px] pointer-events-none" />
+
+    <div class="relative z-10 max-w-6xl mx-auto px-6 md:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <span class="inline-block text-[#06B6D4] text-sm font-semibold tracking-widest uppercase mb-4">Plataforma</span>
+        <h2 class="text-3xl md:text-5xl font-bold text-[#F8FAFC] mb-4 tracking-tight">
+          Recursos Poderosos
+        </h2>
+        <p class="text-[#94A3B8] text-lg max-w-xl mx-auto">
+          Ferramentas avançadas para gestão eficiente de crises
+        </p>
+      </div>
+
+      <!-- Grid 2 colunas - todos cards mesma largura -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+        <!-- Torre de Controle -->
+        <div class="omnivis-card hover:border-[#06B6D4]/30">
+          <div class="omnivis-card__icon bg-[#06B6D4]/15">
+            <Icons.Activity class="w-6 h-6 text-[#06B6D4]" />
+          </div>
+          <h3 class="omnivis-card__title">Torre de Controle</h3>
+          <p class="omnivis-card__text mb-4">
+            Dashboard administrativo com estatísticas e métricas em tempo real.
+          </p>
+          <button 
+            onclick="window.location.href='/torre'"
+            class="inline-flex items-center justify-center text-center min-h-[44px] w-full px-4 py-2 bg-gradient-to-r from-[#F97316] to-[#EF4444] text-white rounded-lg font-semibold hover:opacity-90 transition-all cursor-pointer text-sm"
+          >
+            Acessar Sistema →
+          </button>
+        </div>
+
+        <!-- Status de Abrigos -->
+        <div class="omnivis-card hover:border-[#10B981]/30">
+          <div class="omnivis-card__icon bg-[#10B981]/15">
+            <Icons.Home class="w-6 h-6 text-[#10B981]" />
+          </div>
+          <h3 class="omnivis-card__title">Status de Abrigos</h3>
+          <p class="omnivis-card__text mb-4">
+            Monitoramento de capacidade e lotação em tempo real.
+          </p>
+          <button 
+            onclick="window.location.href='/abrigos'"
+            class="inline-flex items-center justify-center text-center min-h-[44px] w-full px-4 py-2 bg-gradient-to-r from-[#F97316] to-[#EF4444] text-white rounded-lg font-semibold hover:opacity-90 transition-all cursor-pointer text-sm"
+          >
+            Acessar
+          </button>
+        </div>
+
+        <!-- Gestão de Voluntários -->
+        <div class="omnivis-card hover:border-[#06B6D4]/30">
+          <div class="omnivis-card__icon bg-[#06B6D4]/15">
+            <Icons.Users class="w-6 h-6 text-[#06B6D4]" />
+          </div>
+          <h3 class="omnivis-card__title">Gestão de Voluntários</h3>
+          <p class="omnivis-card__text mb-4">
+            Mapeamento de competências e disponibilidade.
+          </p>
+          <button 
+            onclick="window.location.href='/voluntario'"
+            class="inline-flex items-center justify-center text-center min-h-[44px] w-full px-4 py-2 bg-gradient-to-r from-[#F97316] to-[#EF4444] text-white rounded-lg font-semibold hover:opacity-90 transition-all cursor-pointer text-sm"
+          >
+            Acessar
+          </button>
+        </div>
+
+        <!-- Gestão de Packs -->
+        <div class="omnivis-card hover:border-[#F59E0B]/30">
+          <div class="omnivis-card__icon bg-[#F59E0B]/15">
+            <Icons.Shield class="w-6 h-6 text-[#F59E0B]" />
+          </div>
+          <h3 class="omnivis-card__title">Gestão de Packs</h3>
+          <p class="omnivis-card__text mb-4">
+            Formação automática de equipes de ação.
+          </p>
+          <button 
+            onclick="window.location.href='/packs'"
+            class="inline-flex items-center justify-center text-center min-h-[44px] w-full px-4 py-2 bg-gradient-to-r from-[#F97316] to-[#EF4444] text-white rounded-lg font-semibold hover:opacity-90 transition-all cursor-pointer text-sm"
+          >
+            Acessar
+          </button>
+        </div>
+
+        <!-- Logística Inteligente -->
+        <div class="omnivis-card hover:border-[#EF4444]/30">
+          <div class="omnivis-card__icon bg-[#EF4444]/15">
+            <Icons.Truck class="w-6 h-6 text-[#EF4444]" />
+          </div>
+          <h3 class="omnivis-card__title">Logística Inteligente</h3>
+          <p class="omnivis-card__text mb-4">
+            Triangulação automática de recursos.
+          </p>
+          <button 
+            disabled
+            class="inline-flex items-center justify-center text-center min-h-[44px] w-full px-4 py-2 bg-transparent border border-[#06B6D4]/50 text-[#06B6D4]/50 rounded-lg font-semibold cursor-not-allowed text-sm"
+          >
+            Em Breve
+          </button>
+        </div>
+
+        <!-- Mapa Interativo -->
+        <div class="omnivis-card hover:border-[#06B6D4]/30">
+          <div class="omnivis-card__icon bg-[#06B6D4]/15">
+            <Icons.Navigation class="w-6 h-6 text-[#06B6D4]" />
+          </div>
+          <h3 class="omnivis-card__title">Mapa Interativo</h3>
+          <p class="omnivis-card__text mb-4">
+            Visualização georreferenciada de operações.
+          </p>
+          <button 
+            disabled
+            class="inline-flex items-center justify-center text-center min-h-[44px] w-full px-4 py-2 bg-transparent border border-[#06B6D4]/50 text-[#06B6D4]/50 rounded-lg font-semibold cursor-not-allowed text-sm"
+          >
+            Em Breve
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 bg-[#0F172A] relative overflow-hidden">
+    <!-- Glow accent -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#F97316]/8 rounded-full blur-[150px] pointer-events-none" />
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6 md:px-8 text-center">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[#F8FAFC] mb-6 tracking-tight">
+        Pronto para Fazer a Diferença?
+      </h2>
+      <p class="text-lg text-[#94A3B8] max-w-2xl mx-auto mb-12 leading-relaxed">
+        Junte-se a milhares de voluntários e ajude a salvar vidas em situações de desastre. 
+        Sua solidariedade organizada pode mudar tudo.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button 
+          onclick="window.location.href='/voluntario/cadastro'"
+          class="inline-flex items-center justify-center text-center min-h-[48px] px-8 py-3 bg-gradient-to-r from-[#F97316] to-[#EF4444] text-white rounded-lg font-semibold hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#F97316]/25 cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#F97316]"
+        >
+          Quero Ajudar Agora
+        </button>
+        <button 
+          onclick="document.getElementById('como-funciona').scrollIntoView({behavior: 'smooth'})"
+          class="inline-flex items-center justify-center text-center min-h-[48px] px-8 py-3 bg-transparent border-2 border-[#06B6D4] text-[#06B6D4] rounded-lg font-semibold hover:bg-[#06B6D4]/10 transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#06B6D4]"
+        >
+          Ver Detalhes
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer - Dossiê: bg sólido #0A0F1C, sem glassmorphism -->
+  <footer class="py-16 bg-[#0A0F1C]">
+    <div class="max-w-6xl mx-auto px-6 md:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <!-- Brand -->
+        <div>
+          <span class="text-[#06B6D4] font-bold text-xl tracking-tight">OMNIVIS</span>
+          <p class="text-[#94A3B8] text-sm mt-3 leading-relaxed">
+            O ERP da Solidariedade. Sistema operacional para o caos logístico em crises humanitárias.
+          </p>
+        </div>
+        <!-- Links -->
+        <div>
+          <h4 class="text-[#F8FAFC] font-semibold text-sm mb-4">Institucional</h4>
+          <div class="flex flex-col gap-3">
+            <a href="#" class="text-[#94A3B8] hover:text-[#06B6D4] text-sm transition-colors">Sobre o Projeto</a>
+            <a href="#" class="text-[#94A3B8] hover:text-[#06B6D4] text-sm transition-colors">Termos de Uso</a>
+            <a href="#" class="text-[#94A3B8] hover:text-[#06B6D4] text-sm transition-colors">Contato</a>
+            <a href="#" class="text-[#94A3B8] hover:text-[#06B6D4] text-sm transition-colors">Privacidade</a>
+          </div>
+        </div>
+        <!-- Newsletter -->
+        <div>
+          <h4 class="text-[#F8FAFC] font-semibold text-sm mb-4">Mantenha-se Informado</h4>
+          <p class="text-[#94A3B8] text-sm mb-4">Receba atualizações sobre operações e necessidades.</p>
+          <form class="flex gap-2">
+            <input 
+              type="email" 
+              placeholder="seu@email.com" 
+              class="flex-1 min-h-[48px] px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-[#F8FAFC] text-sm placeholder:text-[#94A3B8] focus:outline-none focus:border-[#06B6D4] focus:ring-1 focus:ring-[#06B6D4]"
+            />
+            <button 
+              type="submit"
+              class="inline-flex items-center justify-center text-center min-h-[48px] min-w-[48px] px-4 py-3 bg-gradient-to-r from-[#F97316] to-[#EF4444] text-white rounded-lg font-semibold hover:opacity-90 transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#F97316]"
+            >
+              →
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- Bottom bar -->
+      <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+        <span class="text-[#94A3B8] text-xs">© 2026 OMNIVIS. Todos os direitos reservados.</span>
+        <div class="flex gap-6">
+          <span class="text-[#94A3B8] text-xs">Conformidade ONU</span>
+          <span class="text-[#94A3B8] text-xs">Cluster Humanitário</span>
+          <span class="text-[#94A3B8] text-xs">WCAG 2.1 AAA</span>
+        </div>
+      </div>
+    </div>
+  </footer>
 </Layout>
