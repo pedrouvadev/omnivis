@@ -114,18 +114,16 @@ O escopo do projeto foi desenvolvido utilizando **Google NotebookLM** para pesqu
 
 Este projeto foi desenvolvido de forma inovadora utilizando **10 especialistas de IA** trabalhando em conjunto como uma verdadeira equipe multidisciplinar:
 
-| Especialista de IA | Contribuição |
-|-------------------|--------------|
-| **TechLeadGPT** | Revisão de arquitetura e validação técnica do Design System |
-| **ScrumMasterTechGPT** | Planejamento de 9 sprints com 33 user stories (158 story points) |
-| **ObsidianArchitectGPT** | Documentação e grafo de conhecimento no Obsidian |
-| **DevOpsStackGPT** | Configuração de CI/CD com GitHub Actions |
-| **ResponsivoGPT** | Validação WCAG AAA de acessibilidade |
-| **SaaSArchitectGPT** | Otimização de performance e lazy loading (Lighthouse 100/100) |
-| **Engine-LP-Qualidade-Maxima-IA** | Implementação da Hero Page com componentes 3D |
-| **ReadmeGenGPT** | Criação desta documentação profissional |
-| **ProductOwnerGPT** | Priorização de features baseada em valor de negócio |
-| **AgileScrumGPT** | Definição do backlog detalhado e dependências |
+1. **TechLeadGPT** - Revisão de arquitetura e validação técnica do Design System
+2. **ScrumMasterTechGPT** - Planejamento de 9 sprints com 33 user stories (158 story points)
+3. **ObsidianArchitectGPT** - Documentação e grafo de conhecimento no Obsidian
+4. **DevOpsStackGPT** - Configuração de CI/CD com GitHub Actions
+5. **ResponsivoGPT** - Validação WCAG AAA de acessibilidade
+6. **SaaSArchitectGPT** - Otimização de performance e lazy loading (Lighthouse 100/100)
+7. **Engine-LP-Qualidade-Maxima-IA** - Implementação da Hero Page com componentes 3D
+8. **ReadmeGenGPT** - Criação desta documentação profissional
+9. **ProductOwnerGPT** - Priorização de features baseada em valor de negócio
+10. **AgileScrumGPT** - Definição do backlog detalhado e dependências
 
 ### 📊 Metodologia Scrum
 
@@ -139,13 +137,13 @@ O projeto foi executado seguindo **framework Scrum** com:
 ### 🎯 Plano de Desenvolvimento Tecnológico
 
 Todo o plano de desenvolvimento foi documentado na pasta `/docs/` incluindo:
-- [[SPRINT_PLANNING]] - Planejamento detalhado de 9 sprints
-- [[BACKLOG_USER_STORIES]] - 33 user stories com dependências
-- [[PRODUCT_PRIORITIZATION]] - Priorização MVP Lean
-- [[IMPLEMENTATION_SUMMARY]] - Resumo de implementação
-- [[TECHLEAD_REVIEW]] - Revisão técnica
-- [[ACCESSIBILITY_VALIDATION]] - Validação WCAG AAA
-- [[PERFORMANCE_OPTIMIZATION]] - Otimização de performance
+- [SPRINT_PLANNING.md](docs/SPRINT_PLANNING.md) - Planejamento detalhado de 9 sprints
+- [BACKLOG_USER_STORIES.md](docs/BACKLOG_USER_STORIES.md) - 33 user stories com dependências
+- [PRODUCT_PRIORITIZATION.md](docs/PRODUCT_PRIORITIZATION.md) - Priorização MVP Lean
+- [IMPLEMENTATION_SUMMARY.md](docs/IMPLEMENTATION_SUMMARY.md) - Resumo de implementação
+- [TECHLEAD_REVIEW.md](docs/TECHLEAD_REVIEW.md) - Revisão técnica
+- [ACCESSIBILITY_VALIDATION.md](docs/ACCESSIBILITY_VALIDATION.md) - Validação WCAG AAA
+- [PERFORMANCE_OPTIMIZATION.md](docs/PERFORMANCE_OPTIMIZATION.md) - Otimização de performance
 
 ---
 
@@ -165,7 +163,7 @@ Em situações de desastre, voluntários e doadores querem ajudar, mas não há 
 
 ## 🌐 Acesse o Sistema
 
-**🔗 URL Pública:** [https://pedrouvadev.github.io/omnivis/](https://pedrouvadev.github.io/omnivis/)
+**🔗 URL Pública:** <a href="https://pedrouvadev.github.io/omnivis/" target="_blank" rel="noopener noreferrer">https://pedrouvadev.github.io/omnivis/</a>
 
 > O sistema está hospedado no GitHub Pages e atualizado automaticamente a cada push na branch `main`.
 
@@ -234,13 +232,13 @@ OMNIVIS possui um Design System completo baseado em princípios matemáticos (Pr
 
 ### Documentação
 
-- [[DESIGN_TOKENS_IMPLEMENTATION|Design Tokens Guide]]
-- [[STACK_UPDATE_INSTRUCTIONS|Stack Update Instructions]]
-- [[TECHLEAD_REVIEW|TechLead Review]]
-- [[SPRINT_PLANNING|Sprint Planning]]
-- [[ACCESSIBILITY_VALIDATION|Accessibility Validation]]
-- [[PERFORMANCE_OPTIMIZATION|Performance Optimization]]
-- [[HERO_PAGE_IMPLEMENTATION|Hero Page Implementation]]
+- [DESIGN_TOKENS_IMPLEMENTATION.md](docs/DESIGN_TOKENS_IMPLEMENTATION.md) - Design Tokens Guide
+- [STACK_UPDATE_INSTRUCTIONS.md](docs/STACK_UPDATE_INSTRUCTIONS.md) - Stack Update Instructions
+- [TECHLEAD_REVIEW.md](docs/TECHLEAD_REVIEW.md) - TechLead Review
+- [SPRINT_PLANNING.md](docs/SPRINT_PLANNING.md) - Sprint Planning
+- [ACCESSIBILITY_VALIDATION.md](docs/ACCESSIBILITY_VALIDATION.md) - Accessibility Validation
+- [PERFORMANCE_OPTIMIZATION.md](docs/PERFORMANCE_OPTIMIZATION.md) - Performance Optimization
+- [HERO_PAGE_IMPLEMENTATION.md](docs/HERO_PAGE_IMPLEMENTATION.md) - Hero Page Implementation
 
 ## 🏗️ Estrutura do Projeto
 
