@@ -133,7 +133,7 @@ OMNIVIS possui um Design System completo baseado em princípios matemáticos (Pr
 ## 🏗️ Estrutura do Projeto
 
 ```
-omnivis-code/
+omnivis/
 ├── apps/
 │   ├── backend/          # API Express + Prisma + PostgreSQL
 │   └── frontend/         # Astro + React + Tailwind
